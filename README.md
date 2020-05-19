@@ -1,5 +1,10 @@
 # KinectPython
 ![Open Issues](https://img.shields.io/github/issues/KonstantinosAng/KinectPython.svg)(https://github.com/KonstantinosAng/KinectPython/issues)
+
+## Table of Contents
+1. [Description](##Description))
+2. [Installation](##Installation)
+
 ***
 ## Description
 
