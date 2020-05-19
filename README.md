@@ -4,8 +4,8 @@
 ## Table of Contents
 1. [Description](#Description)
 2. [Installation](#Installation)
-    [Python Setup](#Python))
-    [RoboDK Setup](#RoboDK)
+    - [Python Setup](#Python)
+    - [RoboDK Setup](#RoboDK)
 
 ***
 ## Description
