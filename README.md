@@ -4,13 +4,15 @@
 ## Table of Contents
 1. [Description](#Description)
 2. [Installation](#Installation)
+    [Python Setup](#Python))
+    [RoboDK Setup](#RoboDK)
 
 ***
 ## Description
 
 ## Installation
 
-#### Python Environment Installation
+#### Python Environment Installation <a name="Python"></a>
 
 The constructed architecture works only on Windows and is tested with Python 3.6. 
 First create a fresh conda virtual environment with anaconda that uses Python 3.6 with
@@ -65,6 +67,6 @@ pykinect2_original folder inside the repository's downloaded files.
         C:\Users\UserName\.conda\envs\name_of_your_environment\Scripts
         ```
  
-#### RoboDK Installation 
+#### RoboDK Installation <a name="RoboDK"></a>
 
 1. Download and Install [RoboDK](https://robodk.com/download).
