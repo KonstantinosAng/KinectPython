@@ -6,7 +6,7 @@
 2. [Installation](#Installation)
     - [Python Setup](#Python)
     - [RoboDK Setup](#RoboDK)
-3. [Examples](#Example)
+3. [Examples](#Examples)
 
 ***
 ## Description
