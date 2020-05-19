@@ -1,5 +1,5 @@
 # KinectPython
-[![Open Issues](https://img.shields.io/github/issues/KonstantinosAng/KinectPython.svg)(https://github.com/KonstantinosAng/KinectPython/issues)
+![Open Issues](https://img.shields.io/github/issues/KonstantinosAng/KinectPython.svg)(https://github.com/KonstantinosAng/KinectPython/issues)
 ***
 ## Description
 
