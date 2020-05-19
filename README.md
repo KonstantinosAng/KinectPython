@@ -6,6 +6,7 @@
 2. [Installation](#Installation)
     - [Python Setup](#Python)
     - [RoboDK Setup](#RoboDK)
+3. [Examples](#Example)
 
 ***
 ## Description
@@ -70,3 +71,6 @@ pykinect2_original folder inside the repository's downloaded files.
 #### RoboDK Installation <a name="RoboDK"></a>
 
 1. Download and Install [RoboDK](https://robodk.com/download).
+
+
+## Examples
