@@ -6,6 +6,8 @@
 2. [Installation](#Installation)
     - [Python Setup](#Python)
     - [RoboDK Setup](#RoboDK)
+    - [Reflex One Setup](#ReflexOne)
+    - [ATI Gamma FT Setup](#AtiFT)
 3. [Examples](#Examples)
 
 ***
@@ -69,6 +71,10 @@ pykinect2_original folder inside the repository's downloaded files.
         ```
  
 #### RoboDK Installation <a name="RoboDK"></a>
+
+#### Reflex One Gripper Installation <a name="ReflexOne"></a>
+
+#### ATI Gamma FT Sensor Installation <a name="AtiFT"></a>
 
 1. Download and Install [RoboDK](https://robodk.com/download).
 
