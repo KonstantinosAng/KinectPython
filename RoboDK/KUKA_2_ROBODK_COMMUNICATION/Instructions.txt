@@ -1,0 +1,233 @@
+INSTRUCTION TO CONNECT ROBODK TO KRC2 CONTROLLER (ONLY FOR KRC2 CONTROLLER)
+
+<-------------------------------------------------------------------------->
+1. Connect a monitor, a mouse and a keyboard to KRC2.
+
+2. Minimize the HMI 2.0 GUI by clicking on the scroll bar at the bottom center 
+	or at the T1, HOV 100% or the time. Then click on Minimize at the bottom right 
+	of the screen, below the red window. Then you will see the windows XP OS running
+	screen.
+
+3. Insert a USB Flash Drive on the KRC2 containing the KukavarProxy folder.
+
+4. Copy the KukavarProxy folder on the Desktop.
+
+5. Make a Shortcut on the desktop of the KukavarProxy/src/KukavarProxy.exe file.
+
+6. Click on Start. Then Run and type: cmd. Click OK.
+
+	At the cmd window type:
+
+	cd desktop/kukavarproxy/lib
+	regsvr32 cswsk32.ocx
+
+	Then you will see a window saying: DllRegisterServer in cswsk32.ocx succeeded.
+
+7. The you should be able to execute the kukavarproxy shortcut you made on step 5
+and the kukavarproxy window should come up and the State will be on Listening....
+
+The kukavarproxy server has the ip of the robot and is listening on port 7000.
+
+8. If you want the kukvarproxy.exe to start automatically on reboot:
+
+	- Go to Start -> Programs
+	If you dont see the StartUp foler then click on the down arrows to unfold all programs.
+	- Right Click on Start up -> Open
+	- Then Place the shortcut you made on step 5 inside the window.
+
+9. Now to setup the robot. Locate the file using the HMI 2.0 not from the windows space and log on as administrator in the HMI 2.0 at:
+	KRC\R1\System\$config.dat or C:\KRC\ROBOTER\KRC\R1\System\$config.dat  ( You must be admin to see this file inside the HMI 2.0)
+
+	Open the file using the HMI and under the section User Globals:
+
+					BASISTECH GLOBALS
+					AUTOTEXT GLOBALS
+					
+					USER GLOBALS
+	Under the section:
+	
+					USER GLOBALS
+					 	
+	Add this lines:
+	
+					INT COM_ACTION=0
+					INT COM_ACTCNT=0
+					REAL COM_ROUNDM=0
+					REAL COM_VALUE1=0
+					REAL COM_VALUE2=0
+					REAL COM_VALUE3=0
+					REAL COM_VALUE4=0
+					DECL E6AXIS COM_E6AXIS
+					DECL FRAME COM_FRAME
+					DECL POS COM_POS
+	
+	The section then must be like:
+	
+					BASISTECH GLOBALS
+					AUTOTEXT GLOBALS
+					
+					USER GLOBALS
+
+					INT COM_ACTION=0
+					INT COM_ACTCNT=0
+					REAL COM_ROUNDM=0
+					REAL COM_VALUE1=0
+					REAL COM_VALUE2=0
+					REAL COM_VALUE3=0
+					REAL COM_VALUE4=0
+					DECL E6AXIS COM_E6AXIS
+					DECL FRAME COM_FRAME
+					DECL POS COM_POS
+
+	Save the file and exit.
+
+10. Now to setup your computer. The KRC2 has 2 ethernet ports. Use an Ethernet cable (RJ45 connector) to connect your computer
+	with the KRC2.
+
+11. After connecting your computer with the KRC2 make sure that the network discovery and file sharing is enabled on your computer.
+	
+	Open the network and sharing centre and click on the Change Advance Sharing Centre on the left. At the window click on:
+	
+		Turn on network discovery.
+		
+		Turn on file and printer sharing.
+	
+	Save settings and Exit.
+
+12. At the KRC2 Windows, open the cmd following the instructions on step 6, and type the next command:
+
+	ipconfig /all
+	
+	As we said the KRC2 has two ethernet ports, so you might see two Ethernet Adapter options like:
+	
+		Ethernet adapter Local Area Connection 3: and Ethernet adapter Local Area Connection 5:
+	
+	If you only see one then that is the port that you use. If you see both of them then remove the cable, run the command ipconfig /all
+	and see which option is now missing. That option will be the adapter you use. Connect the cable and move to the next instructions.
+	
+	After locating what adapter you use. locate the IP Address and Subnet Mask under that adapter option:
+	
+		Ethernet adapter Local Area Connection 5:
+			Connection-specific DNS Suffix: ...
+			Description: ...
+			Physical Address: ...
+			Dhcp Enabled: ...
+			IP Address: IP     <--------
+			Subnet Mask: Subnet Masl   <--------
+			Default Gateway: ....
+			NetBIOS over Tcpip: ....
+	
+	Then go to your computer and open network connections. Right Click on Ethernet connection and select Properties.
+	At the Networking tab locate and select the Internet Protocol Version 4 (TCP/IPv4) and click on properties at below right.
+	At the Geneal tab check the Use the following IP address. At the IP address box type the same IP address as the KRC2 but
+	change the last digit by one. Example:
+	
+		KRC2 IP: 192.168.0.10  Your Computer IP: 192.168.0.11
+		
+	At the Subnet Mask box enter the same subnet mask as the robot.
+	Click on OK and exit.
+
+13. If everything is correct you should be able to ping the KRC2 IP. Open the cmd window following the instruction on step 6 and type the next command:
+
+	ping KRC2 IP ( example: ping 192.168.0.10)
+	
+	If you see the following text:
+	
+	Pinging 192.168.0.10 with 32 bytes of data:
+	Reply from 192.168.0.10: bytes=32 time<1ms TTL=128
+	Reply from 192.168.0.10: bytes=32 time<1ms TTL=128
+	Reply from 192.168.0.10: bytes=32 time<1ms TTL=128
+	Reply from 192.168.0.10: bytes=32 time<1ms TTL=128
+
+	Ping statistics for 192.168.0.10:
+		Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+	Approximate round trip times in milli-seconds:
+		Minimum = 0ms, Maximum = 0ms, Average = 0ms
+		
+	If the sent and received packets are the same and the loss is at 0%, then the connection is established. If not then you didnt succeed on connecting locally
+	with the KRC2, follow the instructions again or Restart the KRC2 to change the IP and make the same settings starting from step 10.
+
+14. If you are connected with the KRC2 then you have to check if the port 7000 is open. I have a python script that can do that. The script is called port.py and
+	is in the same folder as this file. Copy the file on the computer desktop, open cmd (step 6) and type the following commands.
+	
+		cd Desktop
+		python port.py KRC2 IP 7000 (Example: python port.py 192.168.0.10 7000)
+		
+	If the port is open you will see the next line: Port 7000 is open. if not the kukavarproxy.exe is not running on KRC2 correctly or the firewall is blocking the port.
+    Try disabling the firewall or uninstall and install the KukaVarProxy.
+
+15. If the port is open and the connection is made the last step is to copy the MainCom.src or the RoboDKsynch.src file ( is provided by RoboDK-driver ) and place it
+	in the C:\KRC\ROBOTER\KRC\R1 directory on the KRC2. Place the .src file from inside the HMI 2.0 and not from the windows in order for the file to be executed (see troubleshoot at the end ).
+	We can now manually start the RoboDKsynch.src program to move the robot with RoboDK (or from command line, see section 2 in Connect-Kuka-robots-with-RoboDK.pdf).
+	If this program is not running RoboDK will still be able to read the robot joints anytime as long as the KUKAVARPROXY program is running in the robot controller.
+	If you placed the RoboDKsync.src file inside the correct folder (KRC/R1) and configured the config.dat file correctly, then you should be able to select the RoboDKsync.src
+	and executed in auto mode.	
+
+16. Then go to the RoboDK and load all your files including the robot. When the robot is loaded, click on Connect from the top and select Connect robot.
+	Click on more options and in the Driver click Select and select the apikuka and click OK. Then replace the robot's IP, port (7000) and click Connect.
+	If everythin is correct then you will see a green connection status as READY.
+
+17. To move the robot from python use:
+	# import libraries
+	from robolink.robolink import Robolink, ITEM_TYPE_ROBOT, RUNMODE_RUN_ROBOT, RUNMODE_SIMULATE, ROBOTCOM_READY
+
+	RDK = Robolink()  # connection to the robot
+	robot = RDK.Item('', ITEM_TYPE_ROBOT)  # get the first robot
+	RDK.setRunMode(RUNMODE_RUN_ROBOT)  # set run robot and not simulation
+	robot.setConnectionParams('robot_ip', port)  # make sure to change the driver also (see step 16)
+	state = robot.Connect()  # connect to robot
+	print(state)
+	# check if connected
+	state, msg = robot.ConnectedState()
+	print(state)
+	print(msg)
+	if state != ROBOTCOM_READY:
+		print("Problems connecting: " + robot.Name() + ": " + msg)
+		quit()
+	# if connected move
+	robot.MoveJ([90.0, 90.0, 0, 0, 0, 0, 0])  # move with joints
+
+######################################################################################
+### See section 2 in Connect-Kuka-robots-with-RoboDK.pdf for further instructions. ###
+######################################################################################
+
+See also:  https://robodk.com/doc/en/Robots-KUKA.html
+Files are also here:  https://www.robodk.com/doc/drivers/Connect-KUKA-robots-with-RoboDK.zip
+
+TROUBLESHOOT:
+
+!---------------------------------------------------------------------------------------------------------------------------------------------!
+If the RoboDK connects and disconnects, reboot KRC2 and try to delete thsi file: C:\Users\username\AppData\Roaming\RoboDK-Drivers\apikuka.exe.ini.
+It will be generated automatically next time you try to connect
+!---------------------------------------------------------------------------------------------------------------------------------------------!
+
+!---------------------------------------------------------------------------------------------------------------------------------------------!
+If the Qt5Network.dll is missing and the kuka api cannot run you have to add the C:/RoboDK/bin to your system PATH with the following instructions:
+
+- Go to Start -> Control Panel -> System and Security -> System and Choose Advanced System Settings from the left
+- From the advanced tab choose the Environment Variables...
+- Under System Variables select Path and then click Edit
+- You will see a lot of paths to folders. Click on New and Type the Path to the folder you want to add ( C:\RoboDK\bin). Click OK and close everything.
+
+
+!---------------------------------------------------------------------------------------------------------------------------------------------!
+
+To setup the file RoboDKsync:
+
+Copy the file with a USB drive and place it inside the KRC2.
+Then copy this file in KRC\R1 but with a different name (RoboDK.src).
+Then from inside the HMI 2.0 go to KRC\R1 and press File -> New and Select the Function Option then name the file RoboDKsync35 and click OK.
+Now Open the copied file (RoboDK.src) and using the shift and the down arrow from the teach pendant select all the lines of code and click on Edit->Copy.
+Then Close the file and Open the RoboDKsync35 file you created and click on Edit->Paste. Click Close and press Yes to Save the changes.
+Delete the copied file (RoboDK.src) and keep the RoboDKsync35.src only. Now if the config.data file is ready and the RoboDKsync file is ready, you should 
+be able to click on the RoboDKsync35 file you created and click on Select from the bottom and execute the program in a auto loop.
+
+!----------------------------------------------------------------------------------------------------------------------------------------------!
+
+To change the home position of the Real Robot:
+
+##### DONT DO THIS IF IT IS NOT NECESSARY #####
+
+Using the HMI 2.0 log on as administrator (password: kuka). Navigate from panel to folder KRC:\R1\System\ and open the $config.dat file.
+Select Program -> FOLD -> All FOLDS open and then scroll to line 172 and change the configuration of the HOME POSITION. Then go to KRC:\R1\Mada and open the $machine.dat
+file. Scroll down to 1436 and change the $H_POS variable to the same configuration.
