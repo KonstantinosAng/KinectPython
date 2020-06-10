@@ -129,7 +129,7 @@ The kukavarproxy server has the ip of the robot and is listening on port 7000.
 
 13. If everything is correct you should be able to ping the KRC2 IP. Open the cmd window following the instruction on step 6 and type the next command:
 
-	ping KRC2 IP ( example: ping 192.168.0.10)
+	ping <KRC2 IP> ( example: ping 192.168.0.10)
 	
 	If you see the following text:
 	
@@ -156,8 +156,8 @@ The kukavarproxy server has the ip of the robot and is listening on port 7000.
 	If the port is open you will see the next line: Port 7000 is open. if not the kukavarproxy.exe is not running on KRC2 correctly or the firewall is blocking the port.
     Try disabling the firewall or uninstall and install the KukaVarProxy.
 
-15. If the port is open and the connection is made the last step is to copy the MainCom.src or the RoboDKsynch.src file ( is provided by RoboDK-driver ) and place it
-	in the C:\KRC\ROBOTER\KRC\R1 directory on the KRC2. Place the .src file from inside the HMI 2.0 and not from the windows in order for the file to be executed (see troubleshoot at the end ).
+15. If the port is open and the connection is made the last step is to copy the MainCom.src or the RoboDKsynch.src file inside the RoboDK/KUKA_2_ROBODK_COMMUNICATION/KUKA-RoboDK-Driver 
+	and place it in the C:\KRC\ROBOTER\KRC\R1 directory on the KRC2. Place the .src file from inside the HMI 2.0 and not from the windows in order for the file to be executed (see troubleshoot at the end ).
 	We can now manually start the RoboDKsynch.src program to move the robot with RoboDK (or from command line, see section 2 in Connect-Kuka-robots-with-RoboDK.pdf).
 	If this program is not running RoboDK will still be able to read the robot joints anytime as long as the KUKAVARPROXY program is running in the robot controller.
 	If you placed the RoboDKsync.src file inside the correct folder (KRC/R1) and configured the config.dat file correctly, then you should be able to select the RoboDKsync.src
