@@ -4,6 +4,7 @@
 ## Table of Contents
 1. [Description](#Description)
 2. [Installation](#Installation)
+    - [Kinect Setup](#Kinect)
     - [Python Setup](#Python)
     - [RoboDK Setup](#RoboDK)
     - [Reflex One Setup](#ReflexOne)
@@ -14,6 +15,10 @@
 ## Description
 
 ## Installation
+
+#### Kinect Setup <a name="Kinect"></a>
+
+To install the drivers for the Kinect 2 for windows download and install the [Kinect for Windows SDK 2.0.](https://www.microsoft.com/en-us/download/details.aspx?id=44561)
 
 #### Python Environment Installation <a name="Python"></a>
 
@@ -71,6 +76,12 @@ pykinect2_original folder inside the repository's downloaded files.
         ```
  
 #### RoboDK Installation <a name="RoboDK"></a>
+
+To configure RoboDK download and install the latest version of RoboDK [using this link.](https://robodk.com/download)
+
+After downloading and installing the RoboDK, load all the 3D models from the Models/ folder and place them in the correct position.
+
+The file _RoboDK/KUKA/KUKA.rdk_ has the constructed workspace of our laboratory workspace, including the Kinect, the robot and the table ad can be loaded in RoboDK.
 
 #### Reflex One Gripper Installation <a name="ReflexOne"></a>
 
