@@ -102,14 +102,14 @@ If the installation is completed and everything works, then follow the next step
 
 2. Connect the Gripper and start the ROS API by running the ros_server.sh bash file.
 
-3. Connect the ATI FT sensor via USB and run the [ATI_FT/ati_ft_sensor.py](ATI_FT/ati_ft_sensor.py) file
+3. Connect the ATI FT sensor via USB and run the [_ATI_FT/ati_ft_sensor.py_](ATI_FT/ati_ft_sensor.py) file
 
 4. Run the [_test view.py_](test_view.py) file to adjust the Kinect's view and position.
 
 5. Capture the background by running the [_background_photo.py_](backround_photo.py)
 
-6. Open the [track_v3.py](track_v3.py) file and change the following flags according to what you want to use:
+6. Open the [_track_v3.py_](track_v3.py) file and change the following flags according to what you want to use:
 
-4. Save and run the [track_v3.py](track_v3.py) file.
+7. Save and run the [_track_v3.py_](track_v3.py) file.
 
 ## Examples
