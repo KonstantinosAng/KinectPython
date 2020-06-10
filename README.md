@@ -9,7 +9,8 @@
     - [RoboDK Setup](#RoboDK)
     - [Reflex One Setup](#ReflexOne)
     - [ATI Gamma FT Setup](#AtiFT)
-3. [Examples](#Examples)
+3. [Usage](#Usage)
+4. [Examples](#Examples)
 
 ***
 ## Description
@@ -85,7 +86,7 @@ pykinect2_original folder inside the repository's downloaded files.
 
 4. After constructing the collaborative space, a connection to the Real KUKA Robot must be established using the Instructions on the [_RoboDK/KUKA_2_ROBODK_COMMUNICATION/Instructions.txt_](RoboDK/KUKA_2_ROBODK_COMMUNICATION/Instructions.txt) file.
 
-5. After loading the files and connecting to the robot, leave the RoboDK open and connected.s
+5. After loading the files and connecting to the robot, leave the RoboDK open and connected.
 
 #### Reflex One Gripper Installation <a name="ReflexOne"></a>
 
@@ -93,7 +94,22 @@ The Refex One  Gripper works only with ROS Jade on Ubuntu 14.04 LTS. In order to
 
 #### ATI Gamma FT Sensor Installation <a name="AtiFT"></a>
 
-1. Download and Install [RoboDK](https://robodk.com/download).
+## Usage
 
+If the installation is completed and everything works, then follow the next steps to use the code.
+
+1. Open RoboDK, load the workstation file, connect to the robot and leave it open.
+
+2. Connect the Gripper and start the ROS API by running the ros_server.sh bash file.
+
+3. Connect the ATI FT sensor via USB and run the [ATI_FT/ati_ft_sensor.py](ATI_FT/ati_ft_sensor.py) file
+
+4. Run the [_test view.py_](test_view.py) file to adjust the Kinect's view and position.
+
+5. Capture the background by running the [_background_photo.py_](backround_photo.py)
+
+6. Open the [track_v3.py](track_v3.py) file and change the following flags according to what you want to use:
+
+4. Save and run the [track_v3.py](track_v3.py) file.
 
 ## Examples
