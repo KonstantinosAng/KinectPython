@@ -77,11 +77,13 @@ pykinect2_original folder inside the repository's downloaded files.
  
 #### RoboDK Installation <a name="RoboDK"></a>
 
-To configure RoboDK download and install the latest version of RoboDK [using this link.](https://robodk.com/download)
+1. To configure RoboDK download and install the latest version of RoboDK [using this link.](https://robodk.com/download)
 
-After downloading and installing the RoboDK, load all the 3D models from the Models/ folder and place them in the correct position.
+2. After downloading and installing the RoboDK, load all the 3D models from the Models/ folder and place them in the correct position.
 
-The file _RoboDK/KUKA/KUKA.rdk_ has the constructed workspace of our laboratory workspace, including the Kinect, the robot and the table and can be loaded in RoboDK.
+3. The file _RoboDK/KUKA/KUKA.rdk_ has the constructed workspace of our laboratory workspace, including the Kinect, the robot and the table and can be loaded in RoboDK.
+
+4. After constructing the collaborative space, a connection to the Real KUKA Robot must be established using the Instructions on the _RoboDK/KUKA_2_ROBODK_COMMUNICATION/Instructions.txt_ file.
 
 #### Reflex One Gripper Installation <a name="ReflexOne"></a>
 
