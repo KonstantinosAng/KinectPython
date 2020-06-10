@@ -1,0 +1,323 @@
+# Instructions to install the Reflex 1 software
+
+1. Install a fresh(optional) version of Ubuntu 14.04.6 x64 (either on a Virtual Machine or a Real Computer).
+
+2. Connect to the Internet
+
+3. Install ROS Jade
+
+Ros Jade is an old version of ROS and can be
+found in the ROS snapshot repository only.
+Visit the ROS snapshot repository here:
+
+http://wiki.ros.org/SnapshotRepository
+
+execute the next steps in the Ubuntu terminal to install ROS Jade.
+
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-key 4B63CF8FDE49746E98FA01DDAD19BAB3CBF125EA
+
+sudo sh -c 'echo "deb http://snapshots.ros.org/jade/final/ubuntu $(lsb_release -sc) main" >> /etc/apt/sources.list.d/ros-snapshots.list'
+
+sudo apt-get update
+
+4. Now ROS Jade can be installed with the next command.
+
+sudo apt-get install ros-jade-desktop-full
+
+5. Initialize rosdep
+
+sudo rosdep init
+rosdep update
+
+6. Setup Environment
+
+echo "source /opt/ros/jade/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+
+source /opt/ros/jade/setup.bash
+
+7. Install rosinstall
+
+sudo apt-get install python-rosinstall
+
+8. Install Reflex 1 software
+
+echo 'source /opt/ros/jade/setup.bash' >> ~/.bashrc
+
+source ~/.bashrc
+
+mkdir -p ~/catkin_ws/src
+
+cd ~/catkin_ws/src
+
+catkin_init_workspace
+
+cd ~/catkin_ws
+
+catkin_make
+
+echo 'source ~/catkin_ws/devel/setup.bash' >> ~/.bashrc
+
+source ~/.bashrc
+
+sudo apt-get install git git-core
+
+9. Add your user to the dialout group
+
+sudo adduser <your_username> dialout
+
+10. Clone the righthand robotics code
+
+cd ~/catkin_ws/src/
+
+git clone https://github.com/RightHandRobotics/reflex-ros-pkg.git
+
+// If your ReFlex gripper connects via USB clone the following (ReFlex SF, ReFlex Plus and ReFlex 1)
+
+git clone https://github.com/RightHandRobotics/dynamixel_motor
+
+11. Run the basic driver
+
+cd ~/catkin_ws/
+
+catkin_make
+
+# ignore error about tf and deprecated Quaternions
+
+12. Check if everything is installed
+
+rospack find reflex_driver
+
+rospack find reflex_msgs
+
+rospack find reflex
+
+13. Install Python 3.6.3 and requirements by running
+the following lines in a terminal
+
+sudo apt-get update
+sudo apt-get install build-essential libpq-dev libssl-dev openssl libffi-dev zlib1g-dev
+sudo apt-get install python3-pip python3-dev
+apt-cache search python3.6
+cd ~/Desktop
+wget https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tgz
+tar -xvf Python-3.6.3.tgz
+cd Python-3.6.3
+sudo ./configure --enable-optimizations
+sudo make -j8
+sudo make install
+sudo chown -R <your_username>:<your_username> ~/Desktop/Python-3.6.3
+sudo apt-get install
+sudo apt-get install python-pip
+sudo pip install --upgrade pip
+sudo pip3 install pyyaml
+sudo pip3 install catkin_pkg
+sudo chown -R <your_username> ~/.ros
+sudo pip3 install rospkg
+sudo pip3 install cryptography
+
+# verify install by running
+python3.6
+
+(OPTIONAL)
+- Make Ubuntu autologin
+Go to settings > User Accounts
+Click on the Unlock on the Top right corner and then
+disable the automatic login.
+
+- Make Ubuntu screen not lock
+Go to settings Brightness & Lock
+and choose never and disable Lock.
+Install Unity Tweak Tool by running:
+
+sudo apt-get install unity-tweak-tool
+
+Run it from the Launcher and select:
+System > Security > Enhance system security by disabling Desktop lock
+
+14. Power the Gripper and plug it in
+
+15. Launch the main gripper node
+
+roslaunch reflex reflex_one.launch
+
+16. if everythin is correct you can see the nodes publishing
+
+rostopic echo /reflex_one/hand_state
+
+17. Check tutorials on how to calibrate the hand and move it
+
+https://www.labs.righthandrobotics.com/calibrate-fingers
+https://www.labs.righthandrobotics.com/open-close-fingers
+https://www.labs.righthandrobotics.com/visualizer
+https://www.labs.righthandrobotics.com/writing-scripts
+
+18. For VM only or external computer
+
+If the Ubuntu is installed on a virtual machine then
+you need to set a static ip to the machine and enable the
+Bridged adapter option in the network tab.
+To set a static IP run:
+
+sudo nano /etc/network/interfaces
+
+And add the following lines to the end of the file:
+
+auto eth0
+iface eth0 inet static
+address <ip>
+netmask 255.255.255.0
+network <ip>.0
+
+Replace <ip> with the IP address you want. For example 192.168.56.1
+Add the same IP to the network but end it with 0. For example 192.168.56.0
+
+Save the file, exit and run the following line:
+
+sudo service network-manager restart
+
+You have to assign the same IP to the computer that will communicate with the external
+computer or VM but change the last number. For example 192.168.56.2 or 192.168.56.3, etc.
+
+After assign the same IP to both machines you will be able to ping each machine from the
+other machine.
+From linux open the terminal and run:
+ping <ip>
+
+Replace <ip> with the other machine's IP and if everthing is correct you will see the following lines:
+
+Pinging <ip> with 32 bytes of data:
+Reply from <ip>: bytes=32 time=8ms TTL=128
+Reply from <ip>: bytes=32 time=3ms TTL=128
+Reply from <ip>: bytes=32 time=3ms TTL=128
+Reply from <ip>: bytes=32 time=2ms TTL=128
+
+Ping statistics for <ip>:
+	Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+	Minimum = 2ms, Maximum = 8ms, Average = 4ms
+
+The same thing for Windows. Press WindowsKey + R, type cmd and press OK.
+Then in the command prompt type the same command as linux but with the Linux
+IP and you should see the same lines.
+
+If the sent and received packets are the same and the loss is at 0%, then the connection is established.
+
+To communicate with the VM you have to place all the files inside the Gripper
+folder to the VM's desktop. After placing all the files move to the calibration.
+
+##########################################################
+######### CALIBRATE THE GRIPPER BEFORE MOVING IT #########
+##########################################################
+See the following link on how to calibrate the finger:
+
+https://www.labs.righthandrobotics.com/calibrate-fingers
+
+or run the following lines:
+
+cd ~/Desktop
+./start.sh
+
+The if everything started run in another terminal:
+
+cd ~/Dekstop
+./calibrate.sh
+
+Go back to the first terminal that the ./start.sh command was run
+and follow the instruction to calibrate the gripper.
+press l or ll and then enter to make the finger loose
+or
+press t or tt and the enter to make the finger tighter
+when finished with a finger press q and move to the next one.
+The calibration process stores the home position of the gripper
+meaning the {0.0, 0.0, 0.0, 0.0, 0.0}.
+
+##############################################
+####### AFTER CALIBRATION IS COMPLETED #######
+##############################################
+
+Open the encryption.py file and replace the following line
+in the generate_key function:
+
+password_provided = "root"
+
+with your own password, save the file, exit and run it as:
+
+cd ~/Desktop
+python3 encryption.py
+
+If there are no errors then there will be a key.key file in Desktop
+and the following lines will be shown in the terminal:
+
+hello
+encrypted_hello
+decrypted_hello
+
+Then open the ros_handler.py file and
+go to the end of the file to find the following lines:
+. . .
+    a = Server('192.168.56.2', 20000, encrypt_flag=True)
+    a.listen()
+. . .
+Replace the Server's IP with the VM's static IP
+and run the ros_server.sh file as user and not root as:
+
+cd ~/Desktop
+./ros_server.sh
+
+If the roslaunch started correctly then you will have one terminal that says:
+ReFlex hand has started, waiting for commands...
+
+and another one saying:
+[GRIPPER SERVER]: UDP server up and listening
+
+Then from the Client computer import the Client class from the ros_handler.py file as:
+
+from Gripper.ros_handler import Client
+
+And initialise it with the same IP and port and encrypt_flag option as the VM API.
+
+a = Client('192.168.56.2', 20000, encrypt_flag=True)
+
+Use the following commands to see the list of commands that the API supports and how to use them
+
+a.send('hello')
+a.receive()
+a.send('help')
+a.receive()
+
+To return the msg and store it use:
+
+msg = a.receive(ret=True)
+
+Remember to always start with at the start of every command as:
+
+a.send('hello')
+a.receive()
+a.send('pub')
+a.send('pos')
+a.send('.0, 0.0, 0.0, 0.0, 0.0')
+
+The .sh files can be run directly inside the VM for quick visualization.
+For example to open the hand:
+./open.sh
+To close the hand:
+./close.sh
+To start the main roslaunch node
+./start.sh
+To calibrate the hand
+./calibrate.sh
+To close all terminal windows
+./exit.sh
+To grasp an object
+./grasp.sh
+To try a custom position
+./position.sh
+To see the motor details
+./motor.sh
+To change the velocity to the maximum
+./velocity.sh
+To start the rviz visualization
+./visualize.sh
+To start the server
+./ros_server.sh
