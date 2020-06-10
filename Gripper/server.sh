@@ -5,4 +5,4 @@
 # Assuming that the start.sh file has been called and ROS started correctly we can publish
 # to the hand node
 # python3 gripper.py For ros indigo
-python3 ros_handler.py
+python3 gripper.py
