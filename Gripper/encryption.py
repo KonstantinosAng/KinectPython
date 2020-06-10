@@ -14,8 +14,9 @@ def generate_key():
     from cryptography.hazmat.backends import default_backend
     from cryptography.hazmat.primitives import hashes
     from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
-
+    #### Change this to the password phrase you want (default root) #####
     password_provided = "root"  # This is input in the form of a string
+    #####################################################################
     password = password_provided.encode()
     salt = b'salt_'  # CHANGE THIS - recommend using a key from os.urandom(16), must be of type bytes
     kdf = PBKDF2HMAC(
