@@ -83,9 +83,13 @@ pykinect2_original folder inside the repository's downloaded files.
 
 3. The file _RoboDK/KUKA/KUKA.rdk_ has the constructed workspace of our laboratory workspace, including the Kinect, the robot and the table and can be loaded in RoboDK.
 
-4. After constructing the collaborative space, a connection to the Real KUKA Robot must be established using the Instructions on the _RoboDK/KUKA_2_ROBODK_COMMUNICATION/Instructions.txt_ file.
+4. After constructing the collaborative space, a connection to the Real KUKA Robot must be established using the Instructions on the [_RoboDK/KUKA_2_ROBODK_COMMUNICATION/Instructions.txt_](RoboDK/KUKA_2_ROBODK_COMMUNICATION/Instructions.txt) file.
+
+5. After loading the files and connecting to the robot, leave the RoboDK open and connected.s
 
 #### Reflex One Gripper Installation <a name="ReflexOne"></a>
+
+The Refex One  Gripper works only with ROS Jade on Ubuntu 14.04 LTS. In order to install and configure the Reflex One software follow the instructions on the [_Gripper/instructions.txt_](Gripper/instructions.txt) file.
 
 #### ATI Gamma FT Sensor Installation <a name="AtiFT"></a>
 
