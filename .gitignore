@@ -1,0 +1,133 @@
+# external github directories
+hand_detection
+hand_test
+# Virtual environment libraries
+venv
+# python cached files
+__pycache__
+# ATI FT directory
+ATI_FT/ros-packages
+ATI_FT/Samples
+ATI_FT/Windows
+ATI_FT/ATIDAQ
+ATI_FT/Calibration/FT3585-Calibration_matrix.json
+ATI_FT/Calibration/FT8585.cal
+# kinect calibrate images
+calibrate/Custom_Calibrate
+# Data & plots
+CasePlots
+data
+# FRI library for c++ communication
+FRILibrary
+# Gripper files
+Gripper/dynamixel_motor-master
+Gripper/reflex-ros-pkg-master
+Gripper/testMotorLoad.py
+# Saved kinect images
+images
+# catia models for robodk
+Models/KUKA LWR IV+/*.STEP
+Models/KUKA LWR IV+/*.dae
+Models/KUKA LWR IV+/*.wrl
+Models/PointCloud/body.txt
+Models/PointCloud/points.txt
+Models/PointCloud/body_index
+Models/PointCloud/Car.ply
+Models/PointCloud/model.pcd
+Models/PointCloud/cloud.txt
+Models/PointCloud/cube.txt
+Models/PointCloud/test_cloud.txt
+Models/PointCloud/test_cloud_1.txt
+Models/PointCloud/test_cloud_2.txt
+Models/PointCloud/test_cloud_3.txt
+Models/PointCloud/test_cloud_4.txt
+Models/PointCloud/test_cloud_5.txt
+Models/PointCloud/test_cloud_6.txt
+Models/PointCloud/test_cloud_7.txt
+Models/PointCloud/test_cloud_8.txt
+Models/PointCloudSkeleton/SkeletonJoints.png
+Models/2D Worker Profile.STEP
+# RoboDK models
+RoboDK/COBRA S800
+RoboDK/KUKA/box.sld
+RoboDK/KUKA/gripper_robotiq_85_opened.tool
+RoboDK/KUKA/plane_1m_grid.sld
+RoboDK/KUKA/welding_table.sld
+RoboDK/KUKA_2_ROBODK_COMMUNICATION/kuka.cps
+RoboDK/KUKA_2_ROBODK_COMMUNICATION/KUKA Settings.txt
+# Videos
+Videos
+# Python test files
+BodyIndex.py
+cad.py
+ControlArrows.py
+depth_tracking.py
+fabric_find.py
+FORTH_Hand_Tracking.py
+FTsensor_Old.py
+GL_pointcloud_test.py
+gripper_demo.py
+index.html
+intrinsicsGithub.py
+mapper.md
+openGL_Cloud.py
+panel.py
+pangolin-PointCloud.py
+pylibfreence2.py
+PointCloud-Visualize.py
+reverseShell.py
+robodk-gui-example.py
+skeleton_track.py
+SocketUDP.py
+test.py
+test21312312.py
+test_3DPointCloud_WorkSpace.py
+test_six_kalman_pred.py
+testbreak.py
+testClosedHand.py
+testCloud.py
+test_cloud.py
+testCloudSkeleton.py
+testCoordination.py
+testFTsensor.py
+testGripper.py
+testhand.py
+testHandRecognition.py
+testing.py
+testing2.py
+testMapper.py
+testMask.py
+testNewCoordinator.py
+testOrientation.py
+testrobot.py
+testRsa.py
+testtest.py
+testkinter.py
+utils_PyKinectV2.py
+visio.py
+webcam_mirror_test.py
+kinect.py
+testBodyIndex.py
+testSkeletonCloud.py
+testPointCloud.py
+testCorrectPointCloud.py
+testJointLimits.py
+testKalman.py
+testtkinter.py
+testFabric.py
+test_skeleton_track.py
+pylibfreenect2.py
+GraspModel.py
+data.txt
+kinect_data.txt
+sum_data.txt
+PlotsCase.py
+testGraspingModel.py
+testThreads.py
+gripper_experimemts.py
+testClasses.py
+test_writer.py
+finalPlots.py
+testLinearMovement.py
+testForces.py
+livePlotting.py
