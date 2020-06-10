@@ -253,6 +253,8 @@ hello
 encrypted_hello
 decrypted_hello
 
+Do the same with the Laptop that will communicate with the Gripper. Use the same password and generate the same key.key file inside the Gripper folder.
+
 Then open the ros_handler.py file and
 go to the end of the file to find the following lines:
 . . .
