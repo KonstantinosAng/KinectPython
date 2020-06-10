@@ -8,7 +8,7 @@ INSTRUCTION TO CONNECT ROBODK TO KRC2 CONTROLLER (ONLY FOR KRC2 CONTROLLER)
 	of the screen, below the red window. Then you will see the windows XP OS running
 	screen.
 
-3. Insert a USB Flash Drive on the KRC2 containing the KukavarProxy folder.
+3. Insert a USB Flash Drive on the KRC2 containing the KukavarProxy-master folder inside the RoboDK/KUKA_2_ROBODK_COMMUNICATION.
 
 4. Copy the KukavarProxy folder on the Desktop.
 
