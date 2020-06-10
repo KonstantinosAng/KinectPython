@@ -230,4 +230,4 @@ To change the home position of the Real Robot:
 
 Using the HMI 2.0 log on as administrator (password: kuka). Navigate from panel to folder KRC:\R1\System\ and open the $config.dat file.
 Select Program -> FOLD -> All FOLDS open and then scroll to line 172 and change the configuration of the HOME POSITION. Then go to KRC:\R1\Mada and open the $machine.dat
-file. Scroll down to 1436 and change the $H_POS variable to the same configuration.
+file. Scroll down to 1436 and change the $H_POS variable to the same configuration. 
