@@ -81,7 +81,7 @@ To configure RoboDK download and install the latest version of RoboDK [using thi
 
 After downloading and installing the RoboDK, load all the 3D models from the Models/ folder and place them in the correct position.
 
-The file _RoboDK/KUKA/KUKA.rdk_ has the constructed workspace of our laboratory workspace, including the Kinect, the robot and the table ad can be loaded in RoboDK.
+The file _RoboDK/KUKA/KUKA.rdk_ has the constructed workspace of our laboratory workspace, including the Kinect, the robot and the table and can be loaded in RoboDK.
 
 #### Reflex One Gripper Installation <a name="ReflexOne"></a>
 
