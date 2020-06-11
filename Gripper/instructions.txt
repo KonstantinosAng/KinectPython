@@ -203,8 +203,10 @@ IP and you should see the same lines.
 
 If the sent and received packets are the same and the loss is at 0%, then the connection is established.
 
-To communicate with the VM you have to place all the files inside the Gripper
-folder to the VM's desktop. After placing all the files move to the calibration.
+In order to communicate with the VM or the Laptop you must be connected to the same network.
+
+To communicate with the VM/Laptop you have to place all the files inside the Gripper
+folder to the VM's/Laptop's desktop. After placing all the files move to the calibration.
 
 ##########################################################
 ######### CALIBRATE THE GRIPPER BEFORE MOVING IT #########
