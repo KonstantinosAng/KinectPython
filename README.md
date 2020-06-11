@@ -94,6 +94,8 @@ The Refex One  Gripper works only with ROS Jade on Ubuntu 14.04 LTS. In order to
 
 #### ATI Gamma FT Sensor Installation <a name="AtiFT"></a>
 
+The ATI FT Gamma Sensor works with Linux and Windows and Python 2 or 3. To setup the ATI FT Sensor follow the instructions on the [_ATI_FT/instructions.txt_](ATI_FT/instructions.txt).
+
 ## Usage
 
 If the installation is completed and everything works, then follow the next steps to use the code.
