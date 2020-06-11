@@ -17,11 +17,11 @@
 
 ## Installation
 
-#### Kinect Setup <a name="Kinect"></a>
+### Kinect Setup <a name="Kinect"></a>
 
 To install the drivers for the Kinect 2 for windows download and install the [Kinect for Windows SDK 2.0.](https://www.microsoft.com/en-us/download/details.aspx?id=44561)
 
-#### Python Environment Installation <a name="Python"></a>
+### Python Environment Installation <a name="Python"></a>
 
 The constructed architecture works only on Windows and is tested with Python 3.6. 
 First create a fresh conda virtual environment with anaconda that uses Python 3.6 with
@@ -76,7 +76,7 @@ pykinect2_original folder inside the repository's downloaded files.
         C:\Users\UserName\.conda\envs\name_of_your_environment\Scripts
         ```
  
-#### RoboDK Installation <a name="RoboDK"></a>
+### RoboDK Installation <a name="RoboDK"></a>
 
 1. To configure RoboDK download and install the latest version of RoboDK [using this link.](https://robodk.com/download)
 
@@ -88,11 +88,11 @@ pykinect2_original folder inside the repository's downloaded files.
 
 5. After loading the files and connecting to the robot, leave the RoboDK open and connected.
 
-#### Reflex One Gripper Installation <a name="ReflexOne"></a>
+### Reflex One Gripper Installation <a name="ReflexOne"></a>
 
 The Refex One  Gripper works only with ROS Jade on Ubuntu 14.04 LTS. In order to install and configure the Reflex One software follow the instructions on the [_Gripper/instructions.txt_](Gripper/instructions.txt) file.
 
-#### ATI Gamma FT Sensor Installation <a name="AtiFT"></a>
+### ATI Gamma FT Sensor Installation <a name="AtiFT"></a>
 
 The ATI FT Gamma Sensor works with Linux and Windows and Python 2 or 3. To setup the ATI FT Sensor follow the instructions on the [_ATI_FT/instructions.txt_](ATI_FT/instructions.txt).
 
