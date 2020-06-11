@@ -503,7 +503,7 @@ if __name__ == '__main__':
     a.send('help')
     a.receive()
     """
-
+    """
     a = Client('192.168.56.2', 20000, encrypt_flag=True)
     a.send('Hello')
     a.receive()
@@ -516,7 +516,7 @@ if __name__ == '__main__':
         a.receive()
 
     a.start_grasping()
-
+    """
     """
     a = Client('192.168.56.2', 20000, encrypt_flag=True)
     a.send('Hello')
@@ -609,6 +609,7 @@ if __name__ == '__main__':
         a.send('root')
         a.receive()
     """
+    # uncomment for server only
     """
     a = Server('192.168.56.2', 20000, encrypt_flag=True)
     a.listen()
