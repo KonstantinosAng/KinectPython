@@ -24,25 +24,25 @@ class Server(object):
         :param encrypt_flag: Flag to encrypt messages or not (must be the same value as the Client value)
         :return None
         """
-        self.IP = ip
-        self.Port = port
-        self.bufferSize = 10240
-        self.msg = str.encode(" Hello UDP Client ")
-        self.msg_exit = str.encode(" Closing server...\n Exit with code 0. ")
+        self.IP = ip  # server ip
+        self.Port = port  # server port
+        self.bufferSize = 10240  # message buffer 1 KB
+        self.msg = str.encode(" Hello UDP Client ")  # server hello message
+        self.msg_exit = str.encode(" Closing server...\n Exit with code 0. ")  # server exit message
         # Create a datagram socket
         self._socket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
         # Bind to address and ip
         self._socket.bind((self.IP, self.Port))
-        self.clients = []
-        self.client_list_key = 'root'
-        self._done = False
-        self._match = False
-        self._ros_started = False
-        self._encryption = encrypt_flag
+        self.clients = []  # client list
+        self.client_list_key = 'root'  # client list key (default root)
+        self._done = False  # flag to exit
+        self._match = False  # flag to check if client is already on list
+        self._ros_started = False  # flag if ROS started
+        self._encryption = encrypt_flag  # encryption flag
 
     def start_thread(self, cmd):
         """
-        Executes cmd commands in new threads in a new terminal on a specific location
+        Executes cmd/terminal commands in new threads in a new terminal on a specific location
         :return None
         """
         thread_command = "gnome-terminal --geometry 60x10+50+50 -e 'bash -c \"{} bash\" '".format(cmd)
@@ -79,17 +79,21 @@ class Server(object):
         print("[GRIPPER SERVER]: UDP server up and listening ")
         while not self._done:
             bytes_received = self.receive()
+            # receive message
             message = bytes_received[0]
             address = bytes_received[1]
             client_msg = "[GRIPPER SERVER]: Message from Client {}: {} ".format(address, message.decode('utf-8'))
             temp_message = message.decode('utf-8')
             temp_message = temp_message.lower()
+            # check if it is hello
             if temp_message != 'hello':
                 self.send(str.encode('Please start with Hello as the first command...'), address)
                 continue
+            # clean client list after 16 saved clients
             if len(self.clients) >= 16:
                 self.clients = []
             self._match = False
+            # store clients
             if len(self.clients) > 0:
                 for client in range(len(self.clients)):
                     if self.clients[client][0] == address[0] and self.clients[client][1] == address[1]:
@@ -110,6 +114,7 @@ class Server(object):
             message = message.lower()
             if message.decode('utf-8') == 'exit' or message.decode('utf-8') == 'quit' or message.decode('utf-8') == 'close' or message.decode('utf-8') == 'terminate' or message.decode('utf-8') == 'kill':
                 try:
+                    # exit server and quit
                     self.send(self.msg_exit, address)
                     exit_ros = threading.Thread(target=self.start_thread, args=('killall gnome-terminal',))
                     exit_ros.start()
@@ -198,6 +203,7 @@ class Server(object):
                     self.send(str.encode(str(e)), address)
             elif message.decode('utf-8') == 'visualize' or message.decode('utf-8') == 'visualizer' or message.decode('utf-8') == 'visual' or message.decode('utf-8') == 'simulate' or message.decode('utf-8') == 'sim' or message.decode('utf-8') == 'simulation':
                 try:
+                    # start rviz visualization
                     publish_ros = threading.Thread(target=self.start_thread, args=('./visualize.sh',))
                     publish_ros.start()
                     publish_ros.join()  # Wait for it to stop
@@ -210,6 +216,7 @@ class Server(object):
                 message = message.lower()
                 if message.decode('utf-8') == 'calibrate' or message.decode('utf-8') == 'calib' or message.decode('utf-8') == 'cal':
                     try:
+                        # start calibration
                         publish_ros = threading.Thread(target=self.start_thread, args=('./calibrate.sh',))
                         publish_ros.start()
                         publish_ros.join()  # Wait for it to stop
@@ -218,6 +225,7 @@ class Server(object):
                         self.send(str.encode(str(e)), address)
                 elif message.decode('utf-8') == 'grasp' or message.decode('utf-8') == 'catch':
                     try:
+                        # grasp an object
                         publish_ros = threading.Thread(target=self.start_thread, args=('./grasp.sh',))
                         publish_ros.start()
                         publish_ros.join()  # Wait for it to stop
@@ -226,6 +234,7 @@ class Server(object):
                         self.send(str.encode(str(e)), address)
                 elif message.decode('utf-8') == 'open':
                     try:
+                        # open gripper
                         publish_ros = threading.Thread(target=self.start_thread, args=('./open.sh',))
                         publish_ros.start()
                         publish_ros.join()  # Wait for it to stop
@@ -234,6 +243,7 @@ class Server(object):
                         self.send(str.encode(str(e)), address)
                 elif message.decode('utf-8') == 'close':
                     try:
+                        # close gripper
                         publish_ros = threading.Thread(target=self.start_thread, args=('./close.sh',))
                         publish_ros.start()
                         publish_ros.join()  # Wait for it to stop
@@ -242,6 +252,7 @@ class Server(object):
                         self.send(str.encode(str(e)), address)
                 elif message.decode('utf-8') == 'velocity' or message.decode('utf-8') == 'vel':
                     try:
+                        # change the  gripper velocity
                         bytes_received = self.receive()
                         message = bytes_received[0]
                         message = message.decode('utf-8')
@@ -273,6 +284,7 @@ rostopic pub -1 /reflex_one/command_velocity reflex_one_msgs/VelocityCommand {}
                         self.send(str.encode(str(e)), address)
                 elif message.decode('utf-8') == 'position' or message.decode('utf-8') == 'pos':
                     try:
+                        # Move gripper to a specific position
                         bytes_received = self.receive()
                         message = bytes_received[0]
                         message = message.decode('utf-8')
@@ -309,14 +321,15 @@ rostopic pub -1 /reflex_one/command_position reflex_one_msgs/PoseCommand {}
                     message = bytes_received[0]
                     message = message.decode('utf-8')
                     message = message.lower()
+                    # check if key is correct
                     if message != self.client_list_key:
                         self.send(str.encode('Wrong Key'), address)
                         continue
+                    # send client list
                     print('[GRIPPER SERVER]: Sending Client List..... ')
                     cl_msg = ' \n------------- Client List -------------\n '
                     for id_number, client in enumerate(self.clients):
                         cl_msg += ' Client: ID = {}, IP = {}, Port = {}\n '.format(id_number, client[0], client[1])
-                        # cl_msg += ' Client: ID = {}'.format(id_number) + ', IP = ' + client[0] + ', Port = ' + str(client[1]) + '\n '
                     self.send(str.encode(cl_msg), address)
                 except Exception as e:
                     self.send(str.encode(str(e)), address)
@@ -328,12 +341,13 @@ rostopic pub -1 /reflex_one/command_position reflex_one_msgs/PoseCommand {}
                     address = bytes_received[1]
                     message = message.decode('utf-8')
                     message = message.lower()
+                    # check if key is correct
                     if message != self.client_list_key:
                         self.send(str.encode('Wrong Key'), address)
                         continue
+                    # Send last client connected
                     print('[GRIPPER SERVER]: Sending Last Client to: {} {} '.format(address[0], address[1]))
                     last_client = ' Last Client: ID = {}, IP = {}, Port = {}\n '.format(len(self.clients)-1, self.clients[-1][0], self.clients[-1][1])
-                    # last_client = ' Last Client: ID = {}'.format(len(self.clients)-1) + ', IP = ' + self.clients[-1][0] + ', Port = ' + str(self.clients[-1][1]) + '\n '
                     self.send(str.encode(last_client), address)
                 except Exception as e:
                     self.send(str.encode(str(e)), address)
