@@ -26,7 +26,7 @@ class Server(object):
         """
         self.IP = ip  # server ip
         self.Port = port  # server port
-        self.bufferSize = 10240  # message buffer 1 KB
+        self.bufferSize = 10240  # message buffer 10 MB
         self.msg = str.encode(" Hello UDP Client ")  # server hello message
         self.msg_exit = str.encode(" Closing server...\n Exit with code 0. ")  # server exit message
         # Create a datagram socket
