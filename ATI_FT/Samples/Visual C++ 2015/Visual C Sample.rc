@@ -1,0 +1,500 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\Visual C Sample.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Visual C Sample.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Visual C Sample"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "Visual C Sample Version 1.1",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (C) 2003",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_VISUALCSAMPLE_DIALOG DIALOGEX 0, 0, 320, 206
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ATI DAQ F/T Visual C Sample"
+MENU IDR_MAINMENU
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",GROUP_FORCE,10,11,150,75
+    LTEXT           "G0",LABEL_FX,20,25,10,10
+    LTEXT           "G1",LABEL_FY,20,45,10,10
+    LTEXT           "G2",LABEL_FZ,20,65,10,10
+    LTEXT           "0",LABEL_FX_VAL,35,25,40,10
+    LTEXT           "0",LABEL_FY_VAL,35,45,40,10
+    LTEXT           "0",LABEL_FZ_VAL,35,65,40,10
+    CONTROL         "Progress1",PROGRESS_FX,"msctls_progress32",PBS_SMOOTH,
+                    80,25,65,10
+    CONTROL         "Progress2",PROGRESS_FY,"msctls_progress32",PBS_SMOOTH,
+                    80,45,65,10
+    CONTROL         "Progress3",PROGRESS_FZ,"msctls_progress32",PBS_SMOOTH,
+                    80,65,65,10
+    GROUPBOX        "",GROUP_TORQUE,10,95,150,75
+    LTEXT           "G3",LABEL_TX,20,110,10,10
+    LTEXT           "G4",LABEL_TY,20,130,10,10
+    LTEXT           "G5",LABEL_TZ,20,150,10,10
+    LTEXT           "0",LABEL_TX_VAL,35,110,40,10
+    LTEXT           "0",LABEL_TY_VAL,35,130,40,10
+    LTEXT           "0",LABEL_TZ_VAL,35,150,40,10
+    CONTROL         "Progress1",PROGRESS_TX,"msctls_progress32",PBS_SMOOTH,
+                    79,110,65,10
+    CONTROL         "Progress2",PROGRESS_TY,"msctls_progress32",PBS_SMOOTH,
+                    80,130,65,10
+    CONTROL         "Progress3",PROGRESS_TZ,"msctls_progress32",PBS_SMOOTH,
+                    80,150,65,10
+    LTEXT           "",LABEL_MESSAGE,170,140,135,60
+    PUSHBUTTON      "Bias",BUTTON_BIAS,170,15,30,15
+    PUSHBUTTON      "Unbias",BUTTON_UNBIAS,170,33,30,15
+    LTEXT           "",LABEL_THERMISTOR,20,180,130,15,SS_CENTERIMAGE | 
+                    WS_DISABLED
+    GROUPBOX        "Display",GROUP_DISPLAY,209,15,75,46
+    CONTROL         "Voltages",RADIO_VOLTAGES,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,213,25,59,8
+    CONTROL         "F/T Units",RADIO_FT,"Button",BS_AUTORADIOBUTTON,213,43,
+                    59,10
+    PUSHBUTTON      "Log Data",IDC_BUTTONLOG,171,70,53,18
+END
+
+IDD_PROGRAM_OPTIONS DIALOGEX 0, 0, 229, 185
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Program Options"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "",FOLDER,14,25,200,125,NOT WS_GROUP,WS_EX_TRANSPARENT
+    DEFPUSHBUTTON   "OK",PROGRAM_OPTIONS_OK,56,164,50,14
+    PUSHBUTTON      "Cancel",PROGRAM_OPTIONS_CANCEL,122,164,50,14
+    CONTROL         "Tab1",IDC_PROGRAM_OPTIONS_TAB,"SysTabControl32",0x0,7,7,
+                    215,148
+END
+
+IDD_SENSOR_INFORMATION DIALOG DISCARDABLE  0, 0, 252, 276
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sensor Information"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         LIST_CALIBRATIONS,20,95,45,70,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",SENSOR_INFORMATION_OK,190,250,50,14
+    GROUPBOX        "Sensor",IDC_SENSOR_GROUP,10,5,230,70
+    LTEXT           "Serial Number",IDC_STATIC,20,15,55,10
+    LTEXT           "Body Style",IDC_STATIC,20,30,55,10
+    LTEXT           "Family",IDC_STATIC,20,45,55,10
+    LTEXT           "No. of Channels",IDC_STATIC,20,60,55,10
+    LTEXT           "Error!",LABEL_SERIAL_NUMBER,105,15,50,10
+    LTEXT           "Error!",LABEL_BODY_STYLE,105,30,50,10
+    LTEXT           "Error!",LABEL_FAMILY,105,45,50,10
+    LTEXT           "Error!",LABEL_NUM_CHANNELS,105,60,50,10
+    GROUPBOX        "Calibrations",IDC_CALIBRATIONS_GROUP,10,80,230,100
+    LTEXT           "Calibration Date",IDC_STATIC,80,90,55,10
+    LTEXT           "Temperature Compensation",IDC_STATIC,80,105,55,20
+    LTEXT           "Output Mode",IDC_STATIC,80,130,55,10
+    LTEXT           "Output Range",IDC_STATIC,80,150,55,10
+    LTEXT           "Output Polarity",IDC_STATIC,80,165,55,10
+    LTEXT           "Error!",LABEL_CALIBRATION_DATE,150,90,70,10
+    LTEXT           "Error!",LABEL_TEMP_COMPENSATION,150,110,70,10
+    LTEXT           "Error!",LABEL_OUTPUT_MODE,150,128,70,17
+    LTEXT           "Error!",LABEL_OUTPUT_RANGE,150,150,70,10
+    LTEXT           "Error!",LABEL_OUTPUT_POLARITY,150,165,70,10
+    GROUPBOX        "Maximum Loads",IDC_MAX_LOADS_GROUP,10,185,120,80
+    LTEXT           "Axis 1",LABEL_AXIS_1,25,200,25,10
+    LTEXT           "Error!",LABEL_AXIS_MAX_1,55,200,55,10
+    LTEXT           "Axis 2",LABEL_AXIS_2,25,210,25,10
+    LTEXT           "Error!",LABEL_AXIS_MAX_2,55,210,55,10
+    LTEXT           "Axis 3",LABEL_AXIS_3,25,220,25,10
+    LTEXT           "Error!",LABEL_AXIS_MAX_3,55,220,55,10
+    LTEXT           "Axis 4",LABEL_AXIS_4,25,230,25,10
+    LTEXT           "Error!",LABEL_AXIS_MAX_4,55,230,55,10
+    LTEXT           "Axis 5",LABEL_AXIS_5,25,240,25,10
+    LTEXT           "Error!",LABEL_AXIS_MAX_5,55,240,55,10
+    LTEXT           "Axis 6",LABEL_AXIS_6,25,250,25,10
+    LTEXT           "Error!",LABEL_AXIS_MAX_6,55,250,55,10
+END
+
+TAB_GENERAL DIALOG DISCARDABLE  0, 0, 200, 125
+STYLE DS_3DLOOK | WS_CHILD | WS_DISABLED | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Time Interval for Screen Updates",IDC_STATIC,10,10,55,
+                    20
+    EDITTEXT        EDIT_TIME_INTERVAL,75,13,30,12,ES_AUTOHSCROLL
+    CONTROL         "Beep for ADC Saturation",CHECK_BEEP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,42,50,115,10
+    CONTROL         "Show Thermistor Readings",CHECK_THERMISTOR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,42,65,115,10
+    LTEXT           "ms",IDC_STATIC,110,15,15,10
+    CONTROL         "Autoload This Configuration at Startup",
+                    IDC_CHECKAUTOLOAD,"Button",BS_AUTOCHECKBOX | 
+                    BS_MULTILINE | WS_TABSTOP,41,75,152,23
+END
+
+TAB_NIDAQ DIALOG DISCARDABLE  0, 0, 200, 125
+STYLE WS_CHILD | WS_DISABLED | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        EDIT_DEVICE_NUMBER,124,31,55,12,ES_AUTOHSCROLL
+    LTEXT           "NI-DAQ Device Number",IDC_STATIC,20,31,80,10
+    LTEXT           "First Channel Index",IDC_STATIC,20,57,80,10
+    LTEXT           "Scan Rate",IDC_STATIC,20,83,80,10
+    EDITTEXT        EDIT_FIRST_CHANNEL_INDEX,124,57,55,12,ES_AUTOHSCROLL
+    EDITTEXT        EDIT_SCAN_RATE,124,82,55,12,ES_AUTOHSCROLL
+END
+
+TAB_STARTUP DIALOG DISCARDABLE  0, 0, 200, 125
+STYLE WS_CHILD | WS_DISABLED | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "When this program starts:",IDC_STATIC,24,17,150,90
+    CONTROL         "Load this configuration file",CHECK_LOAD_CONFIG,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,37,44,100,10
+    EDITTEXT        EDIT_CONFIG_PATH,32,67,115,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",BUTTON_LOAD_CONFIG,157,67,10,10
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 237, 196
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,60,175,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,126,175,50,14
+    CONTROL         "Tab1",IDC_SETTINGS_TAB,"SysTabControl32",0x0,11,15,215,
+                    148
+    LTEXT           "",PALETTE,17,34,200,125,NOT WS_GROUP,WS_EX_TRANSPARENT
+    EDITTEXT        IDC_EDIT1,55,73,64,10,ES_AUTOHSCROLL
+END
+
+TAB_OUTPUT_OPTIONS DIALOG DISCARDABLE  0, 0, 200, 125
+STYLE WS_CHILD | WS_DISABLED | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Temperature Compensation",CHECK_TEMP_COMP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,15,115,15
+    GROUPBOX        "Units",IDC_STATIC,15,45,165,65
+    CTEXT           "Force Units",IDC_STATIC,25,60,50,15,SS_CENTERIMAGE
+    CTEXT           "Torque Units",IDC_STATIC,25,85,50,15,SS_CENTERIMAGE
+    CONTROL         "",COMBOBOX_FORCE,"ComboBoxEx32",CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,90,60,80,70
+    CONTROL         "",COMBOBOX_TORQUE,"ComboBoxEx32",CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP,90,85,80,70
+END
+
+TAB_TOOL_TRANSFORMS DIALOG DISCARDABLE  0, 0, 200, 125
+STYLE WS_CHILD | WS_DISABLED | WS_BORDER
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         LIST_TRANSFORMS,15,15,100,95,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add",BUTTON_ADD_TRANSFORM,130,15,55,20
+    PUSHBUTTON      "Edit",BUTTON_EDIT_TRANSFORM,130,40,55,20
+    PUSHBUTTON      "Remove",BUTTON_REMOVE_TRANSFORM,130,65,55,20
+    PUSHBUTTON      "Remove All",BUTTON_REMOVE_ALL_TRANSFORMS,130,90,55,20
+END
+
+IDD_TOOL_TRANSFORM DIALOG DISCARDABLE  0, 0, 186, 76
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tool Transform"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,35,55,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,101,55,50,14
+    CTEXT           "Axis",IDC_STATIC,10,10,45,15,SS_CENTERIMAGE
+    CONTROL         "",COMBO_AXIS,"ComboBoxEx32",CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,10,30,45,65
+    CTEXT           "Value",IDC_STATIC,70,10,45,15,SS_CENTERIMAGE
+    EDITTEXT        EDIT_VALUE,70,30,45,12,ES_AUTOHSCROLL
+    CTEXT           "Units",IDC_STATIC,130,10,45,15,SS_CENTERIMAGE
+    CONTROL         "",COMBO_UNITS,"ComboBoxEx32",CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP,130,30,45,65
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1,0,0
+ PRODUCTVERSION 1,1,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Visual C Sample MFC Application\0"
+            VALUE "FileVersion", "1, 1, 0, 0\0"
+            VALUE "InternalName", "Visual C Sample\0"
+            VALUE "LegalCopyright", "Copyright (C) 2002\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "Visual C Sample.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Visual C Sample Application\0"
+            VALUE "ProductVersion", "1, 1, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_VISUALCSAMPLE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_PROGRAM_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_SENSOR_INFORMATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 269
+    END
+
+    TAB_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    TAB_NIDAQ, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    TAB_STARTUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    TAB_OUTPUT_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    TAB_TOOL_TRANSFORMS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 118
+    END
+
+    IDD_TOOL_TRANSFORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open Calibration",           OPEN_CALIBRATION
+        MENUITEM SEPARATOR
+        MENUITEM "Open Configuration",          OPEN_CONFIGURATION, INACTIVE
+        MENUITEM "Save Configuration",          SAVE_CONFIGURATION, INACTIVE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       EXIT
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Settings",                   SETTINGS
+        MENUITEM "Sensor &Information",         SENSOR_INFORMATION
+        MENUITEM SEPARATOR
+        MENUITEM "Program &Options",            PROGRAM_OPTIONS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+    IDS_ABOUTBOX            "&About Visual C Sample..."
+    IDS_PROPSHT_CAPTION     "Property Sheet"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\Visual C Sample.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

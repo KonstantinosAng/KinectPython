@@ -1,0 +1,42 @@
+// DAQ Visual Cpp Sample.odl : type library source for DAQ Visual Cpp Sample.exe
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (DAQ Visual Cpp Sample.tlb).
+
+[ uuid(4BC1D071-3403-4633-958D-07F4C2F97E0A), version(1.0) ]
+library VisualCSample
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+
+	//  Primary dispatch interface for CVisualCSampleDoc
+	
+	[ uuid(9E2E294D-255E-4A5D-BDF3-471C8951394A) ]
+	dispinterface IVisualCSample
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CVisualCSampleDlgAutoProxy)
+			//}}AFX_ODL_PROP
+			
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CVisualCSampleDlgAutoProxy)
+			//}}AFX_ODL_METHOD
+
+	};
+
+	//  Class information for CVisualCSampleDoc
+	
+	[ uuid(A00BA95E-3B28-4092-826F-A96B80B3CEDD) ]
+	coclass VisualCSample
+	{
+		[default] dispinterface IVisualCSample;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

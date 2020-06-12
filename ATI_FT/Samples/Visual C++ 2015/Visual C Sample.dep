@@ -1,0 +1,186 @@
+# Microsoft Developer Studio Generated Dependency File, included by Visual C Sample.mak
+
+.\atidaqft.cpp : \
+	".\atidaqft.h"\
+	
+
+.\DAQSys.cpp : \
+	".\DAQSys.h"\
+	".\Visual C Sample.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaq.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqcns.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqerr.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqex.h"\
+	"c:\program files\national instruments\ni - daq\include\olderror.h"\
+	
+
+.\DlgProxy.cpp : \
+	".\atidaqft.h"\
+	".\DAQSys.h"\
+	".\DlgProxy.h"\
+	".\FTWrapper.h"\
+	".\ProgramOptionsDlg.h"\
+	".\SensorInformationDlg.h"\
+	".\Settings.h"\
+	".\TabGeneral.h"\
+	".\TabNIDAQ.h"\
+	".\TabOutputOptions.h"\
+	".\TabStartup.h"\
+	".\TabToolTransforms.h"\
+	".\Visual C Sample.h"\
+	".\Visual C SampleDlg.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaq.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqcns.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqerr.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqex.h"\
+	"c:\program files\national instruments\ni - daq\include\olderror.h"\
+	
+
+.\FTWrapper.cpp : \
+	".\atidaqft.h"\
+	".\DAQSys.h"\
+	".\FTWrapper.h"\
+	".\Visual C Sample.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaq.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqcns.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqerr.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqex.h"\
+	"c:\program files\national instruments\ni - daq\include\olderror.h"\
+	
+
+.\PopupToolTransform.cpp : \
+	".\atidaqft.h"\
+	".\PopupToolTransform.h"\
+	".\Visual C Sample.h"\
+	
+
+.\ProgramOptionsDlg.cpp : \
+	".\atidaqft.h"\
+	".\DAQSys.h"\
+	".\FTWrapper.h"\
+	".\ProgramOptionsDlg.h"\
+	".\TabGeneral.h"\
+	".\TabNIDAQ.h"\
+	".\TabStartup.h"\
+	".\Visual C Sample.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaq.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqcns.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqerr.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqex.h"\
+	"c:\program files\national instruments\ni - daq\include\olderror.h"\
+	
+
+.\SensorInformationDlg.cpp : \
+	".\atidaqft.h"\
+	".\DAQSys.h"\
+	".\FTWrapper.h"\
+	".\SensorInformationDlg.h"\
+	".\Visual C Sample.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaq.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqcns.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqerr.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqex.h"\
+	"c:\program files\national instruments\ni - daq\include\olderror.h"\
+	
+
+.\Settings.cpp : \
+	".\atidaqft.h"\
+	".\DAQSys.h"\
+	".\FTWrapper.h"\
+	".\Settings.h"\
+	".\TabOutputOptions.h"\
+	".\TabToolTransforms.h"\
+	".\Visual C Sample.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaq.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqcns.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqerr.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqex.h"\
+	"c:\program files\national instruments\ni - daq\include\olderror.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+.\TabGeneral.cpp : \
+	".\TabGeneral.h"\
+	".\Visual C Sample.h"\
+	
+
+.\TabNIDAQ.cpp : \
+	".\TabNIDAQ.h"\
+	".\Visual C Sample.h"\
+	
+
+.\TabOutputOptions.cpp : \
+	".\TabOutputOptions.h"\
+	".\Visual C Sample.h"\
+	
+
+.\TabStartup.cpp : \
+	".\TabStartup.h"\
+	".\Visual C Sample.h"\
+	
+
+.\TabToolTransforms.cpp : \
+	".\atidaqft.h"\
+	".\DAQSys.h"\
+	".\FTWrapper.h"\
+	".\PopupToolTransform.h"\
+	".\TabToolTransforms.h"\
+	".\Visual C Sample.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaq.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqcns.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqerr.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqex.h"\
+	"c:\program files\national instruments\ni - daq\include\olderror.h"\
+	
+
+".\Visual C Sample.cpp" : \
+	".\atidaqft.h"\
+	".\DAQSys.h"\
+	".\FTWrapper.h"\
+	".\ProgramOptionsDlg.h"\
+	".\SensorInformationDlg.h"\
+	".\Settings.h"\
+	".\TabGeneral.h"\
+	".\TabNIDAQ.h"\
+	".\TabOutputOptions.h"\
+	".\TabStartup.h"\
+	".\TabToolTransforms.h"\
+	".\Visual C Sample.h"\
+	".\Visual C SampleDlg.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaq.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqcns.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqerr.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqex.h"\
+	"c:\program files\national instruments\ni - daq\include\olderror.h"\
+	
+
+".\Visual C Sample.rc" : \
+	".\res\Visual C Sample.ico"\
+	".\res\Visual C Sample.rc2"\
+	
+
+".\Visual C SampleDlg.cpp" : \
+	".\atidaqft.h"\
+	".\DAQSys.h"\
+	".\DlgProxy.h"\
+	".\FTWrapper.h"\
+	".\ProgramOptionsDlg.h"\
+	".\SensorInformationDlg.h"\
+	".\Settings.h"\
+	".\TabGeneral.h"\
+	".\TabNIDAQ.h"\
+	".\TabOutputOptions.h"\
+	".\TabStartup.h"\
+	".\TabToolTransforms.h"\
+	".\Visual C Sample.h"\
+	".\Visual C SampleDlg.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaq.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqcns.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqerr.h"\
+	"c:\program files\national instruments\ni - daq\include\nidaqex.h"\
+	"c:\program files\national instruments\ni - daq\include\olderror.h"\
+	

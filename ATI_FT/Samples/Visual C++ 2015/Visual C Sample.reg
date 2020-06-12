@@ -1,0 +1,13 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+
+HKEY_CLASSES_ROOT\VisualCSample.Application = VisualCSample Application
+HKEY_CLASSES_ROOT\VisualCSample.Application\CLSID = {43F944CE-AC8E-4923-B010-9608D3420FC6}
+
+HKEY_CLASSES_ROOT\CLSID\{43F944CE-AC8E-4923-B010-9608D3420FC6} = VisualCSample Application
+HKEY_CLASSES_ROOT\CLSID\{43F944CE-AC8E-4923-B010-9608D3420FC6}\ProgId = VisualCSample.Application
+HKEY_CLASSES_ROOT\CLSID\{43F944CE-AC8E-4923-B010-9608D3420FC6}\LocalServer32 = VISUAL C SAMPLE.EXE

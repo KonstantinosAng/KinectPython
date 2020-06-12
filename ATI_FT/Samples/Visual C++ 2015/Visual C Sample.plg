@@ -1,0 +1,106 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Visual C Sample - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "midl.exe /nologo /D "NDEBUG" /tlb "Release/Visual C Sample.tlb" /mktyplib203 /win32 "C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\Visual C Sample.odl""
+Creating command line "rc.exe /l 0x409 /fo"Release/Visual C Sample.res" /i "C:\Program Files\National Instruments\NI - DAQ\Include\\" /i "Release" /d "NDEBUG" /d "_AFXDLL" "C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\Visual C Sample.rc"" 
+Creating temporary file "C:\DOCUME~1\skusa\LOCALS~1\Temp\RSP2D.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "C:\Program Files\National Instruments\NI-DAQ\DAQmx ANSI C Dev\include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/Visual C Sample.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\atidaqft.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\DAQSys.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\DlgProxy.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\FTWrapper.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\PopupToolTransform.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\ProgramOptionsDlg.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\RegAccess.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\SensorInformationDlg.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\Settings.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\TabGeneral.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\TabNIDAQ.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\TabOutputOptions.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\TabStartup.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\TabToolTransforms.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\Visual C Sample.cpp"
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\Visual C SampleDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\skusa\LOCALS~1\Temp\RSP2D.tmp" 
+Creating temporary file "C:\DOCUME~1\skusa\LOCALS~1\Temp\RSP2E.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "C:\Program Files\National Instruments\NI-DAQ\DAQmx ANSI C Dev\include" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Release/Visual C Sample.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\skusa\LOCALS~1\Temp\RSP2E.tmp" 
+Creating temporary file "C:\DOCUME~1\skusa\LOCALS~1\Temp\RSP2F.tmp" with contents
+[
+NIDAQmx.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/Visual C Sample.pdb" /machine:I386 /out:"Release/Visual C Sample.exe" /libpath:"C:\Program Files\National Instruments\NI-DAQ\DAQmx ANSI C Dev\lib\msvc" 
+".\Release\atidaqft.obj"
+".\Release\DAQSys.obj"
+".\Release\DlgProxy.obj"
+".\Release\FTWrapper.obj"
+".\Release\PopupToolTransform.obj"
+".\Release\ProgramOptionsDlg.obj"
+".\Release\RegAccess.obj"
+".\Release\SensorInformationDlg.obj"
+".\Release\Settings.obj"
+".\Release\StdAfx.obj"
+".\Release\TabGeneral.obj"
+".\Release\TabNIDAQ.obj"
+".\Release\TabOutputOptions.obj"
+".\Release\TabStartup.obj"
+".\Release\TabToolTransforms.obj"
+".\Release\Visual C Sample.obj"
+".\Release\Visual C SampleDlg.obj"
+".\Release\Visual C Sample.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\skusa\LOCALS~1\Temp\RSP2F.tmp"
+<h3>Output Window</h3>
+Creating Type Library...
+Processing C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\Visual C Sample.odl
+Visual C Sample.odl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\oaidl.idl
+oaidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\objidl.idl
+objidl.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\unknwn.idl
+unknwn.idl
+Processing C:\Program Files\Microsoft Visual Studio\VC98\INCLUDE\wtypes.idl
+wtypes.idl
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+atidaqft.cpp
+DAQSys.cpp
+DlgProxy.cpp
+FTWrapper.cpp
+PopupToolTransform.cpp
+ProgramOptionsDlg.cpp
+C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\ProgramOptionsDlg.cpp(118) : warning C4101: 'error' : unreferenced local variable
+RegAccess.cpp
+SensorInformationDlg.cpp
+Settings.cpp
+TabGeneral.cpp
+TabNIDAQ.cpp
+TabOutputOptions.cpp
+TabStartup.cpp
+TabToolTransforms.cpp
+Visual C Sample.cpp
+Visual C SampleDlg.cpp
+C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\Visual C SampleDlg.cpp(481) : warning C4101: 'e' : unreferenced local variable
+C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\Visual C SampleDlg.cpp(485) : warning C4101: 'e' : unreferenced local variable
+C:\ATI Software\FT\DAQ FT\DAQMX VISUAL C SAMPLE\Visual C SampleDlg.cpp(494) : warning C4101: 'e' : unreferenced local variable
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Visual C Sample.exe - 0 error(s), 4 warning(s)
+</pre>
+</body>
+</html>

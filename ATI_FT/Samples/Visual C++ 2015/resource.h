@@ -1,0 +1,125 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Developer Studio generated include file.
+// Used by Visual C Sample.rc
+//
+#define IDM_ABOUTBOX                    0x0010
+#define IDD_ABOUTBOX                    100
+#define IDP_OLE_INIT_FAILED             100
+#define IDS_ABOUTBOX                    101
+#define IDD_VISUALCSAMPLE_DIALOG        102
+#define IDS_PROPSHT_CAPTION             103
+#define IDR_MAINFRAME                   128
+#define IDR_MAINMENU                    131
+#define IDD_PROGRAM_OPTIONS             136
+#define IDD_SENSOR_INFORMATION          137
+#define TAB_GENERAL                     138
+#define TAB_NIDAQ                       139
+#define TAB_STARTUP                     140
+#define IDD_SETTINGS                    141
+#define TAB_OUTPUT_OPTIONS              142
+#define IDD_TOOL_TRANSFORM              143
+#define TAB_TOOL_TRANSFORMS             144
+#define GROUP_FORCE                     1001
+#define PROGRESS_FX                     1002
+#define PROGRESS_FY                     1003
+#define PROGRESS_FZ                     1004
+#define LABEL_FX                        1005
+#define LABEL_FY                        1006
+#define LABEL_FZ                        1007
+#define LABEL_FX_VAL                    1008
+#define LABEL_FY_VAL                    1009
+#define LABEL_FZ_VAL                    1010
+#define LABEL_MESSAGE                   1016
+#define BUTTON_BIAS                     1017
+#define BUTTON_UNBIAS                   1018
+#define CHECK_RAWVOLTAGES               1021
+#define GROUP_TORQUE                    1022
+#define LABEL_TX                        1023
+#define IDC_PROGRAM_OPTIONS_TAB         1023
+#define LABEL_TY                        1024
+#define PROGRAM_OPTIONS_OK              1024
+#define LABEL_TZ                        1025
+#define PROGRAM_OPTIONS_CANCEL          1025
+#define LABEL_TX_VAL                    1026
+#define LABEL_TY_VAL                    1027
+#define SENSOR_INFORMATION_OK           1027
+#define LABEL_TZ_VAL                    1028
+#define IDC_SENSOR_GROUP                1028
+#define PROGRESS_TX                     1029
+#define PROGRESS_TY                     1030
+#define LIST_CALIBRATIONS               1030
+#define PROGRESS_TZ                     1031
+#define LABEL_SERIAL_NUMBER             1031
+#define LABEL_BODY_STYLE                1032
+#define LABEL_FAMILY                    1033
+#define LABEL_NUM_CHANNELS              1034
+#define IDC_ANIMATE1                    1035
+#define LABEL_CALIBRATION_DATE          1036
+#define LABEL_TEMP_COMPENSATION         1037
+#define LABEL_OUTPUT_MODE               1038
+#define LABEL_OUTPUT_RANGE              1039
+#define LABEL_OUTPUT_POLARITY           1040
+#define LABEL_AXIS_MAX_1                1042
+#define LABEL_AXIS_MAX_2                1043
+#define LABEL_AXIS_MAX_3                1044
+#define LABEL_AXIS_MAX_4                1045
+#define LABEL_AXIS_MAX_5                1046
+#define LABEL_AXIS_MAX_6                1047
+#define LABEL_AXIS_1                    1048
+#define LABEL_AXIS_2                    1049
+#define LABEL_AXIS_3                    1050
+#define LABEL_AXIS_4                    1051
+#define LABEL_AXIS_5                    1052
+#define LABEL_AXIS_6                    1053
+#define IDC_CALIBRATIONS_GROUP          1054
+#define IDC_MAX_LOADS_GROUP             1055
+#define EDIT_TIME_INTERVAL              1058
+#define CHECK_LOAD_CONFIG               1059
+#define CHECK_THERMISTOR                1060
+#define EDIT_CONFIG_PATH                1063
+#define EDIT_FIRST_CHANNEL_INDEX        1064
+#define EDIT_SCAN_RATE                  1065
+#define BUTTON_LOAD_CONFIG              1066
+#define CHECK_BEEP                      1067
+#define EDIT_DEVICE_NUMBER              1068
+#define FOLDER                          1073
+#define PALETTE                         1074
+#define IDC_SETTINGS_TAB                1075
+#define CHECK_TEMP_COMP                 1076
+#define LIST_TRANSFORMS                 1081
+#define BUTTON_ADD_TRANSFORM            1082
+#define BUTTON_EDIT_TRANSFORM           1083
+#define BUTTON_REMOVE_TRANSFORM         1084
+#define BUTTON_REMOVE_ALL_TRANSFORMS    1085
+#define COMBOBOX_FORCE                  1087
+#define COMBOBOX_TORQUE                 1088
+#define COMBO_AXIS                      1089
+#define EDIT_VALUE                      1090
+#define COMBO_UNITS                     1091
+#define LABEL_THERMISTOR                1091
+#define IDC_EDIT1                       1094
+#define RADIO_VOLTAGES                  1095
+#define RADIO_FT                        1096
+#define GROUP_DISPLAY                   1098
+#define IDC_BUTTONLOG                   1100
+#define IDC_CHECKAUTOLOAD               1101
+#define OPEN_CALIBRATION                32771
+#define OPEN_CONFIGURATION              32772
+#define SAVE_CONFIGURATION              32773
+#define EXIT                            32774
+#define SETTINGS                        32775
+#define SENSOR_INFORMATION              32776
+#define PROGRAM_OPTIONS                 32778
+#define CONTENTS                        32779
+#define ABOUT                           32781
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        144
+#define _APS_NEXT_COMMAND_VALUE         32782
+#define _APS_NEXT_CONTROL_VALUE         1104
+#define _APS_NEXT_SYMED_VALUE           106
+#endif
+#endif
