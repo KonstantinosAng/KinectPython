@@ -88,7 +88,7 @@ class Sensor(object):
 
     def start(self):
         """
-        # Start Query string output reading from the sensor
+        Start Query string output reading from the sensor
         :return: Boolean
         """
         if self._mode == 'binary':
@@ -109,7 +109,7 @@ class Sensor(object):
 
     def stop(self):
         """
-        # Stop query output from sensor and close connection
+        Stop query output from sensor and close connection
         :return: bytes in format '\r\n\rn>'
         """
         self.connection.write('\r')
