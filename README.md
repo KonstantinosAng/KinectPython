@@ -108,9 +108,21 @@ If the installation is completed and everything works, then follow the next step
 
 4. Run the [_test view.py_](test_view.py) file to adjust the Kinect's view and position.
 
-5. Capture the background by running the [_background_photo.py_](backround_photo.py)
+5. Capture the background by running the [_background_photo.py_](backround_photo.py) file.
 
 6. Open the [_track_v3.py_](track_v3.py) file and change the following flags according to what you want to use:
+    - dim = True  # Flag for finding the fabric's dimensions
+    - cal = False  # Flag for calibrating the camera
+    - Sim = True  # Flag for starting RoboDK
+    - RealMovement = True  # Flag to move the real robot with RoboDK
+    - gestureInit = True  # Flag for custom Gesture classifier
+    - gripperInit = True  # Flag to connect to gripper
+    - sensorInit = True  # Flag to connect to the ATI FT Sensor
+    - kalmanInit = True  # Flag for drawing kalman on screen
+    - skeletonInit = True  # Flag for drawing kinect's skeleton tracking on screen
+    - cloudInit = False  # Flag for Cloud Skeleton Visualize in RoboDK
+    - cloudPointInit = False  # Flag to import the workspace as a pointCloud in RoboDK
+    - full_screen = False  # flag to open pygame in fullscreen
 
 7. Save and run the [_track_v3.py_](track_v3.py) file.
 
