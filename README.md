@@ -179,3 +179,17 @@ The framework was tested by performing two folds in two different directions. Im
 <p align="center">
     <img src="images/Fold3.png"/> 
 </p>
+Image examples from the second fold:
+<table>
+  <tr>
+    <td align="center" style="font-weight:bold"> Fold 2: Start </td>
+     <td align="center" style="font-weight:bold"> Fold 2: End </td>
+  </tr>
+  <tr>
+    <td><img src="images/Fold4.png" width=425 height=480></td>
+    <td><img src="images/Fold5.png" width=425 height=480></td>
+  </tr>
+ </table>
+<p align="center">
+    <img src="images/Fold6.png"/> 
+</p>
