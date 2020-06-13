@@ -167,8 +167,8 @@ If the installation is completed and everything works, then follow the next step
 ## Examples
 The framework was tested by performing two folds in two different directions. Image examples from the first fold:
 <p>
-<img src="images/Fold1.png" width="50%" />'
-<img src="images/Fold2.png" width="50%" />
+<img src="images/Fold1.png" width="100" />'
+<img src="images/Fold2.png" width="100" />
 </p>
 <p align="center">
 <img src="images/Fold3.png"/> 
