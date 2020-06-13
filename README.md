@@ -25,25 +25,26 @@ The constructed framework and the hardware used can be seen in the figure below.
 <p align="center">
     <img src="images/framework.png"/> 
 </p>
-<style>
-    .hwifo {
-        width:100%;
-    }
-</style>
-<table class="hwinfo">
-  <tr>
-    <td align="center" style="font-weight:bold"> CPU: Intel Core i3 - 3110m </td>
-    <td align="center"> 2.4 GHz, 2 Cores & 4 Threads </td>
-  </tr>
-  <tr>
-    <td align="center" style="font-weight:bold"> GPU: Nvidia Geforce GT710M </td>
-    <td align="center"> GPU Memory 1 GB </td>
-  </tr>
-  <tr>
-    <td align="center" style="font-weight:bold"> RAM: DDR3 1600 MHz </td>
-    <td align="center"> 8 GB </td>
-  </tr>
-</table>
+<div>
+    <table>
+      <tr>
+        <td><img width=435 /> </td>
+        <td><img width=435 /> </td>
+      </tr>
+      <tr>
+        <td align="center" style="font-weight:bold"> CPU: Intel Core i3 - 3110m </td>
+        <td align="center"> 2.4 GHz, 2 Cores & 4 Threads </td>
+      </tr>
+      <tr>
+        <td align="center" style="font-weight:bold"> GPU: Nvidia Geforce GT710M </td>
+        <td align="center"> GPU Memory 1 GB </td>
+      </tr>
+      <tr>
+        <td align="center" style="font-weight:bold"> RAM: DDR3 1600 MHz </td>
+        <td align="center"> 8 GB </td>
+      </tr>
+    </table>
+</div>
 
 ## Installation
 
