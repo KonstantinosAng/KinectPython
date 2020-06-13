@@ -162,17 +162,21 @@ If the installation is completed and everything works, then follow the next step
    cloudPointInit = False  # Flag to import the workspace as a pointCloud in RoboDK
    full_screen = False  # flag to open pygame in fullscreen
    ```
-   Then change the following parameters to your own configurations:
+   Then change the following parameters to your own configurations. Specifically, the Robot's controller IP and port:
    ```
    """======================== ROBOT CONFIGS ==========================="""
    ROBOT_IP = '169.254.98.120'  # KRC2 LAN IP
    ROBOT_PORT = 7000  # KRC2 LAN port
-   
+   ```
+   The Gripper ROS API IP, port and encryption flag same as the server's value:
+   ```
    """============================= Gripper Configs ==========================="""
    VM_IP = '192.168.56.2'  # Vm with Ubuntu Host only Static IP
    VM_PORT = 20000  # Port to communicate with Ubuntu running ROS
    VM_SERVER_ENCRYPTION = True
-   
+   ```
+   The ATI Controller Server IP, port, encryption flag (same as the server's value) and the COM port that the ATI FT controller is connected to.
+   ```
    """========================== ATI FT Sensor Configs ====================="""
    ATI_FT_IP = 'localhost'
    ATI_FT_PORT = 10000
