@@ -15,6 +15,11 @@
 ***
 ## Description
 
+This algorithm is designed to utilize the [Kinect for windows 2 RGB/D sensor](https://developer.microsoft.com/el-gr/windows/kinect/), 
+the [KUKA LWR IV+](https://www.kuka.com/en-de/products/robot-systems/industrial-robots) industrial robot, 
+the [ATI Force Torque Gamma Sensor](https://www.ati-ia.com/products/ft/ft_models.aspx?id=Gamma) and 
+the [Reflex One](https://www.labs.righthandrobotics.com/reflexhand) gripper to enable the Human - Robot 
+
 ## Installation
 
 ### Kinect Setup <a name="Kinect"></a>
