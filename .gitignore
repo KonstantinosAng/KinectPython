@@ -33,6 +33,8 @@ Gripper/reflex-ros-pkg-master
 Gripper/testMotorLoad.py
 # Saved kinect images
 images
+# mapper data
+mapper/data.csv
 # catia models for robodk
 Models/KUKA LWR IV+/*.STEP
 Models/KUKA LWR IV+/*.dae
