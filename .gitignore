@@ -12,6 +12,12 @@ ATI_FT/Windows
 ATI_FT/ATIDAQ
 ATI_FT/Calibration/FT3585-Calibration_matrix.json
 ATI_FT/Calibration/FT8585.cal
+ATI_FT/final_test.py
+ATI_FT/ft.py
+ATI_FT/t.py
+ATI_FT/test_format.py
+ATI_FT/testConnection.py
+ATI_FT/ttt
 # kinect calibrate images
 calibrate/Custom_Calibrate
 # Data & plots
@@ -45,16 +51,41 @@ Models/PointCloud/test_cloud_5.txt
 Models/PointCloud/test_cloud_6.txt
 Models/PointCloud/test_cloud_7.txt
 Models/PointCloud/test_cloud_8.txt
+Models/PointCloud/test_cloud_10.pcd
+Models/PointCloud/test_cloud_10.ply
+Models/PointCloud/test_cloud_11.ply
+Models/PointCloud/testRoboDK.txt
 Models/PointCloudSkeleton/SkeletonJoints.png
 Models/2D Worker Profile.STEP
+Models/ATI-NANO25-E.stl
+Models/Dummy Box.stl
+Models/test_cloud_10.txt
 # RoboDK models
 RoboDK/COBRA S800
 RoboDK/KUKA/box.sld
 RoboDK/KUKA/gripper_robotiq_85_opened.tool
+RoboDK/KUKA/Home_Test.rdk
+RoboDK/KUKA/KUKA LWR IV+ Custom.rdk
+RoboDK/KUKA/KUKA LWR IV+ Custom Light.rdk
+RoboDK/KUKA/KUKA LWR IV+ Custom Light Real.rdk
+RoboDK/KUKA/KUKA LWR IV+ Custom Medium.rdk
+RoboDK/KUKA/KUKA LWR IV+ Custom Medium v2.rdk
+RoboDK/KUKA/KUKA LWR IV PLUS.rdk
+RoboDK/KUKA/KUKA PLOTS.rdk
+RoboDK/KUKA/KUKA-LBR-iiwa-14-R820.robot
+RoboDK/KUKA/KUKA-LWR-IV-PLUS.robot
+RoboDK/KUKA/KUKA-LWR-IV-PLUS-CUSTOM.robot
+RoboDK/KUKA/KUKA-LWR-IV-PLUS-CUSTOM-MEDIUM.robot
+RoboDK/KUKA/KUKA-LWR-IV-PLUS-CUSTOM-MEDIUM v2.robot
+RoboDK/KUKA/KUKA-LWR-IV-PLUS-CUSTOM-REAL.robot
 RoboDK/KUKA/plane_1m_grid.sld
 RoboDK/KUKA/welding_table.sld
+RoboDK/KUKA/Custom_Post_Processor
+RoboDK/KUKA/Sheet Factor
 RoboDK/KUKA_2_ROBODK_COMMUNICATION/kuka.cps
 RoboDK/KUKA_2_ROBODK_COMMUNICATION/KUKA Settings.txt
+RoboDK/KUKA_2_ROBODK_COMMUNICATION/apikukaiiwa.py
+RoboDK/KUKA_2_ROBODK_COMMUNICATION/testTCP.py
 # Videos
 Videos
 # Python test files
