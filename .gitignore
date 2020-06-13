@@ -12,6 +12,8 @@ ATI_FT/Windows
 ATI_FT/ATIDAQ
 ATI_FT/Calibration/FT3585-Calibration_matrix.json
 ATI_FT/Calibration/FT8585.cal
+ATI_FT/Calibration/FT8585 Calibration Certificate and Accuracy Report.pdf
+ATI_FT/encryption.pyc
 ATI_FT/final_test.py
 ATI_FT/ft.py
 ATI_FT/t.py
@@ -82,6 +84,8 @@ RoboDK/KUKA/plane_1m_grid.sld
 RoboDK/KUKA/welding_table.sld
 RoboDK/KUKA/Custom_Post_Processor
 RoboDK/KUKA/Sheet Factor
+RoboDK/KUKA_2_ROBODK_COMMUNICATION/KUKA-RoboDK-Driver/KukaVarProxy
+RoboDK/KUKA_2_ROBODK_COMMUNICATION/KUKA-RoboDK-Driver/old-kukavarproxy
 RoboDK/KUKA_2_ROBODK_COMMUNICATION/kuka.cps
 RoboDK/KUKA_2_ROBODK_COMMUNICATION/KUKA Settings.txt
 RoboDK/KUKA_2_ROBODK_COMMUNICATION/apikukaiiwa.py
