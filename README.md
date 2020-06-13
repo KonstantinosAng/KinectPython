@@ -100,17 +100,23 @@ The ATI FT Gamma Sensor works with Linux and Windows and Python 2 or 3. To setup
 
 If the installation is completed and everything works, then follow the next steps to use the code.
 
-1. Open RoboDK, load the workstation file, connect to the robot and leave it open.
+1. Start the KUKA Controller, select the RoboDKsync35.src file, run it in an automatic loop from the teach pendant and lower the robot speed for safety.
 
-2. Connect the Gripper and start the ROS API by running the ros_server.sh bash file.
+2. Open RoboDK, load the workstation file, connect to the robot and leave it open.
 
-3. Connect the ATI FT sensor via USB and run the [_ATI_FT/ati_ft_sensor.py_](ATI_FT/ati_ft_sensor.py) file
+3. Connect the Gripper and start the ROS API by running the ros_server.sh bash file.
 
-4. Run the [_test view.py_](test_view.py) file to adjust the Kinect's view and position.
+4. Power On the ATI controller, connect the ATI FT sensor via USB and run the [_ATI_FT/ati_ft_sensor.py_](ATI_FT/ati_ft_sensor.py) file.
 
-5. Capture the background by running the [_background_photo.py_](backround_photo.py) file.
+5. Run the [_test view.py_](test_view.py) file to adjust the Kinect's view and position.
 
-6. Open the [_track_v3.py_](track_v3.py) file and change the following flags according to what you want to use:
+6. Capture the background by running the [_background_photo.py_](backround_photo.py) file.
+
+7. Then lay down the fabric and make sure it is unfolded properly.
+
+8. Connect the Kinect via USB to the computer.
+
+9. Open the [_track_v3.py_](track_v3.py) file and change the following flags according to what you want to use:
     - dim = True  # Flag for finding the fabric's dimensions
     - cal = False  # Flag for calibrating the camera
     - Sim = True  # Flag for starting RoboDK
@@ -124,6 +130,38 @@ If the installation is completed and everything works, then follow the next step
     - cloudPointInit = False  # Flag to import the workspace as a pointCloud in RoboDK
     - full_screen = False  # flag to open pygame in fullscreen
 
-7. Save and run the [_track_v3.py_](track_v3.py) file.
+10. Save and run the [_track_v3.py_](track_v3.py) file.
 
+11. if everything is correct you will see the following lines on the screen:
+    
+    +-----------------------------+
+    [MAIN] Elapsed Time:  seconds
+    [MAIN] Loaded: 100%
+    [MAIN] Starting...
+    +-----------------------------+
+    [ATI FT CLIENT]: Message from Server: Hello UDP Client
+    [ATI FT CLIENT]: Message from Server: Hello UDP Client
+    [ATI FT CLIENT]: Message from Server: Started ATI FT... You can grab...
+    +-------------------+
+    Connecting to Gripper Server
+    [GRIPPER CLIENT]: Message from Server: Hello UDP Client
+    [GRIPPER CLIENT]: Message from Server: Hello UDP Client
+    [GRIPPER CLIENT]: Message from Server: Started ROS... You can publish...
+    [GRIPPER CLIENT]: Message from Server: Hello UDP Client
+    [GRIPPER CLIENT]: Message from Server: Opened Gripper
+    [ROBODK]: Connection Successful
+    [ROBODK]: Robot Status: Connected
+    +-------------------+
+       Fabric Detected   
+       Width (mm): 
+       Height (mm): 
+    World Center Point (XYZ in mm):
+     Color2World Fabric Points (mm):
+     ISO Speed Calculated
+    +-------------------+
+    +-------------------+
+      Starting Tracking  
+    +-------------------+
+    
+    
 ## Examples
