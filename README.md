@@ -17,8 +17,15 @@
 
 This algorithm is designed to utilize the [Kinect for windows 2 RGB/D sensor](https://developer.microsoft.com/el-gr/windows/kinect/), 
 the [KUKA LWR IV+](https://www.kuka.com/en-de/products/robot-systems/industrial-robots) industrial robot, 
-the [ATI Force Torque Gamma Sensor](https://www.ati-ia.com/products/ft/ft_models.aspx?id=Gamma) and 
-the [Reflex One](https://www.labs.righthandrobotics.com/reflexhand) gripper to enable the Human - Robot 
+the [ATI Force Torque Gamma Sensor](https://www.ati-ia.com/products/ft/ft_models.aspx?id=Gamma), 
+the [Reflex One](https://www.labs.righthandrobotics.com/reflexhand) gripper 
+and non Linear [Kalman Filter](http://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman%20filter.pdf) estimation to enable the 
+Human - Robot Collaboration for fabric folding. This algorithm is an extension of this [publication](https://www.researchgate.net/publication/278028040_Human_Robot_Collaboration_for_Folding_Fabrics_Based_on_ForceRGB-D_Feedback).
+The constructed framework and the hardware used can be seen in the figure below.
+<p align="center">
+    <img src="images/framework.png"/> 
+</p>
+
 
 ## Installation
 
