@@ -134,6 +134,10 @@ testrobot.py
 testRsa.py
 testtest.py
 testkinter.py
+TODO.txt
+track.py
+track_light.py
+track_v2.py
 utils_PyKinectV2.py
 visio.py
 webcam_mirror_test.py
@@ -162,4 +166,4 @@ finalPlots.py
 testLinearMovement.py
 testForces.py
 livePlotting.py
-TODO.txt
+PointCloud.py
