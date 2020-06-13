@@ -229,7 +229,7 @@ to properly fold the fabric.
 The constructed collaborative space can be seen inside the RoboDK simulation space:
 <table>
   <tr>
-    <td><img src="images/workspace.png" width=720 height=480></td>
+    <td><img src="images/workspace.png" width=800 height=480></td>
   </tr>
 </table>
 The framework was tested by performing two folds in two different directions. Image examples from the first fold:
