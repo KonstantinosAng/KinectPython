@@ -448,7 +448,7 @@ class Clients:
                 startSensor = True
                 return sensorInit, startSensor
             except Exception as e:
-                print(f'[ATI FT CLIENT]: {e}')
+                print("[ATI FT CLIENT]: {}".format(e))
 
     def gripper_client_connect(self):
         """
@@ -488,7 +488,7 @@ class Clients:
                 return gripperInit, startGripper, gripper_status
             # Handle exceptions
             except Exception as e:
-                print(f'[GRIPPER CLIENT]: {e}')
+                print("[GRIPPER CLIENT]: {}".format(e))
 
     def robodk_client_connect(self):
         """
@@ -544,7 +544,7 @@ class ReflexOne(Clients):
             self._done = True
             return startGripper, waitGripper, gripper_state, monitorStop, graspBias, daq_thread
         except Exception as e:
-            print(f'[GRIPPER CLIENT]: {e}')
+            print("[GRIPPER CLIENT]: {}".format(e))
 
     def close(self):
         self.__exit__()
@@ -1287,7 +1287,7 @@ class KinectMain(Clients):
                                     Catch exception where server has not initialized and fixed the correct
                                     sequence for the ATI FT Sensor and fixing sequence is transmitted.
                                     """
-                                    print(f'[ATI FT CLIENT]: SERVER NOT INITIALISED \n {e}')
+                                    print("[ATI FT CLIENT]: SERVER NOT INITIALISED \n {}".format(e))
                                     forces = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
                                 # Initialize Kalman Filters
                                 if kalman_ft_first_time:
@@ -1307,7 +1307,7 @@ class KinectMain(Clients):
                                 z = z + fz
                                 # print(x, y, z)
                             except Exception as e:
-                                print(f'[ATI FT CLIENT]: {e}')
+                                print("[ATI FT CLIENT]: {}".format(e))
 
                         # If startSim is false robot has moved to corner and is ready
                         if not startSim:
@@ -1455,12 +1455,12 @@ class KinectMain(Clients):
                 try:
                     dim, fabric_points, fabric_center, fabric_width, fabric_height, q_relev_max_speed = self.find_fabric(dim)
                 except Exception as e:
-                    print(f'[FABRIC EXTRACTION]: {e}')
+                    print("[FABRIC EXTRACTION]: {}".format(e))
 
             self._screen.blit(surface_to_draw, (0, 0))
             """
             if not dim and self._counter <= 50*self.Limit:
-                print(f'[TRACK]: Save Image {self._counter}')
+                print("[MAIN]: Save Image {}".format(self._counter))
                 pygame.image.save(surface_to_draw, 'images/orientation3.png')
                 self._counter += 1
             """
