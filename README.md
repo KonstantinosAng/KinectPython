@@ -218,8 +218,20 @@ If the installation is completed and everything works, then follow the next step
       Starting Tracking  
     +-------------------+
     ```
-    
+<br>
+
+When the Starting tracking message show up then the operator can enter the collaborative space and grab a fabric corner.
+Then the decision model will compute the robot's starting point and command the robot to approach the fabric and grab the 
+fabric using the appropriate grasping model. After the robot has grabbed the fabric, it starts to follow the operator's movement
+to properly fold the fabric.
+
 ## Examples
+The constructed collaborative space can be seen inside the RoboDK simulation space:
+<table>
+  <tr>
+    <td><img src="images/workspace.png" width=720 height=480></td>
+  </tr>
+</table>
 The framework was tested by performing two folds in two different directions. Image examples from the first fold:
 <table>
   <tr>
