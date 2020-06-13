@@ -1,4 +1,10 @@
 """
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+"""
+"""
 Handles the communication between the controller, the FT Sensor and the laptops
 """
 import socket
