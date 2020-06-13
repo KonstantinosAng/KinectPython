@@ -20,6 +20,10 @@ the [ATI Force Torque Gamma Sensor](https://www.ati-ia.com/products/ft/ft_models
 the [Reflex One](https://www.labs.righthandrobotics.com/reflexhand) gripper 
 and non Linear [Kalman Filter](http://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman%20filter.pdf) estimation to enable the 
 Human - Robot Collaboration for fabric folding. This algorithm is an extension of this [publication](https://www.researchgate.net/publication/278028040_Human_Robot_Collaboration_for_Folding_Fabrics_Based_on_ForceRGB-D_Feedback).
+First the algorithm identifies the laid fabric using the background subtraction technique and map the fabric corner points to the corresponding
+wolrd space coordinates. After locating the fabric, the operator can enter the collaborative space and grab a fabric corner. Then the decision model will compute the robot's starting point and command the robot to approach the fabric and grab the 
+fabric using the appropriate grasping model. After the robot has grabbed the fabric, it starts to follow the operator's movement
+to properly fold the fabric.
 The constructed framework and the hardware used can be seen in the figure below.
 <p align="center">
     <img src="images/framework.png"/> 
