@@ -535,7 +535,7 @@ def connect(ip, port, robot):
         # Print Robot status
         print("[ROBODK]: Robot Status: " + status_msg)
     except Exception as e:
-        print(f'[ROBODK]: {e}')
+        print("[ROBODK]: {}".format(e))
 
 
 def target_joints(RDK, target):
