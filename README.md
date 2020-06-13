@@ -172,8 +172,8 @@ The framework was tested by performing two folds in two different directions. Im
      <td align="center" style="font-weight:bold"> Fold 1: End </td>
   </tr>
   <tr>
-    <td><img src="images/Fold1.png" width=430 height=480></td>
-    <td><img src="images/Fold2.png" width=430 height=480></td>
+    <td><img src="images/Fold1.png" width=435 height=480></td>
+    <td><img src="images/Fold2.png" width=435 height=480></td>
   </tr>
  </table>
 <p align="center">
@@ -186,8 +186,8 @@ Image examples from the second fold:
      <td align="center" style="font-weight:bold"> Fold 2: End </td>
   </tr>
   <tr>
-    <td><img src="images/Fold4.png" width=425 height=480></td>
-    <td><img src="images/Fold5.png" width=425 height=480></td>
+    <td><img src="images/Fold4.png" width=435 height=480></td>
+    <td><img src="images/Fold5.png" width=435 height=480></td>
   </tr>
  </table>
 <p align="center">
