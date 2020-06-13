@@ -28,8 +28,8 @@ The constructed framework and the hardware used can be seen in the figure below.
 <div>
     <table>
       <tr>
-        <td><img width=435 /> </td>
-        <td><img width=435 /> </td>
+        <td align="center" style="font-weight:bold"><img width=435 /> Hardware </td>
+        <td align="center" style="font-weight:bold"><img width=435 /> Specifications </td>
       </tr>
       <tr>
         <td align="center" style="font-weight:bold"> CPU: Intel Core i3 - 3110m </td>
