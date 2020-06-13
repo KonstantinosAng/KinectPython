@@ -148,18 +148,38 @@ If the installation is completed and everything works, then follow the next step
 8. Connect the Kinect via USB to the computer.
 
 9. Open the [_track_v3.py_](track_v3.py) file and change the following flags according to what you want to use:
-    - dim = True  # Flag for finding the fabric's dimensions
-    - cal = False  # Flag for calibrating the camera
-    - Sim = True  # Flag for starting RoboDK
-    - RealMovement = True  # Flag to move the real robot with RoboDK
-    - gestureInit = True  # Flag for custom Gesture classifier
-    - gripperInit = True  # Flag to connect to gripper
-    - sensorInit = True  # Flag to connect to the ATI FT Sensor
-    - kalmanInit = True  # Flag for drawing kalman on screen
-    - skeletonInit = True  # Flag for drawing kinect's skeleton tracking on screen
-    - cloudInit = False  # Flag for Cloud Skeleton Visualize in RoboDK
-    - cloudPointInit = False  # Flag to import the workspace as a pointCloud in RoboDK
-    - full_screen = False  # flag to open pygame in fullscreen
+    ```
+   dim = True  # Flag for finding the fabric's dimensions
+   cal = False  # Flag for calibrating the camera
+   Sim = True  # Flag for starting RoboDK
+   RealMovement = True  # Flag to move the real robot with RoboDK
+   gestureInit = True  # Flag for custom Gesture classifier
+   gripperInit = True  # Flag to connect to gripper
+   sensorInit = True  # Flag to connect to the ATI FT Sensor
+   kalmanInit = True  # Flag for drawing kalman on screen
+   skeletonInit = True  # Flag for drawing kinect's skeleton tracking on screen
+   cloudInit = False  # Flag for Cloud Skeleton Visualize in RoboDK
+   cloudPointInit = False  # Flag to import the workspace as a pointCloud in RoboDK
+   full_screen = False  # flag to open pygame in fullscreen
+   ```
+   Then change the following parameters to your own configurations:
+   ```
+   """======================== ROBOT CONFIGS ==========================="""
+   ROBOT_IP = '169.254.98.120'  # KRC2 LAN IP
+   ROBOT_PORT = 7000  # KRC2 LAN port
+   
+   """============================= Gripper Configs ==========================="""
+   VM_IP = '192.168.56.2'  # Vm with Ubuntu Host only Static IP
+   VM_PORT = 20000  # Port to communicate with Ubuntu running ROS
+   VM_SERVER_ENCRYPTION = True
+   
+   """========================== ATI FT Sensor Configs ====================="""
+   ATI_FT_IP = 'localhost'
+   ATI_FT_PORT = 10000
+   ATI_FT_SERVER_ENCRYPTION = True
+   ATI_FT_COM_PORT_WINDOWS = 'COM1'  # Port that the DAQ ATI is connected to the windows computer
+   ATI_FT_COM_PORT_LINUX = '/dev/ttyUSB0'  # Port that the ATI Controller FT is connected to the linux computer
+   ```
 
 10. Save and run the [_track_v3.py_](track_v3.py) file.
 
