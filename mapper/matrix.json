@@ -1,0 +1,15 @@
+{
+    "Description":"Transformation matrix to go from Color Coordinates to Depth Coordinates,\nwithout the need of MapColorFrameToDepthSpace from ICoordinateMapper.\nSee mapper.py for more information",
+    "Transformation Matrix":[
+        [
+            0.3484838606185838,
+            -0.00984636868469769,
+            -87.72969068102957
+        ],
+        [
+            0.0036034106170969036,
+            0.3451299052877123,
+            15.888727547620928
+        ]
+    ]
+}
