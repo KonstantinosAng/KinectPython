@@ -25,7 +25,20 @@ The constructed framework and the hardware used can be seen in the figure below.
 <p align="center">
     <img src="images/framework.png"/> 
 </p>
-
+<table>
+  <tr>
+    <td align="center" style="font-weight:bold"> CPU: Intel Core i3 - 3110m </td>
+    <td align="center" style="font-weight:bold"> 2.4 GHz, 2 Cores & 4 Threads </td>
+  </tr>
+  <tr>
+    <td align="center" style="font-weight:bold"> GPU: Nvidia Geforce GT710M </td>
+    <td align="center" style="font-weight:bold"> GPU Memory 1 GB </td>
+  </tr>
+  <tr>
+    <td align="center" style="font-weight:bold"> RAM: DDR3 1600 MHz </td>
+    <td align="center" style="font-weight:bold"> 8 GB </td>
+  </tr>
+</table>
 
 ## Installation
 
@@ -181,13 +194,13 @@ The framework was tested by performing two folds in two different directions. Im
 <table>
   <tr>
     <td align="center" style="font-weight:bold"> Fold 1: Start </td>
-     <td align="center" style="font-weight:bold"> Fold 1: End </td>
+    <td align="center" style="font-weight:bold"> Fold 1: End </td>
   </tr>
   <tr>
     <td><img src="images/Fold1.png" width=435 height=480></td>
     <td><img src="images/Fold2.png" width=435 height=480></td>
   </tr>
- </table>
+</table>
 <p align="center">
     <img src="images/Fold3.png"/> 
 </p>
@@ -195,13 +208,13 @@ Image examples from the second fold:
 <table>
   <tr>
     <td align="center" style="font-weight:bold"> Fold 2: Start </td>
-     <td align="center" style="font-weight:bold"> Fold 2: End </td>
+    <td align="center" style="font-weight:bold"> Fold 2: End </td>
   </tr>
   <tr>
     <td><img src="images/Fold4.png" width=435 height=480></td>
     <td><img src="images/Fold5.png" width=435 height=480></td>
   </tr>
- </table>
+</table>
 <p align="center">
     <img src="images/Fold6.png"/> 
 </p>
