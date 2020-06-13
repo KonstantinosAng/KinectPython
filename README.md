@@ -165,3 +165,7 @@ If the installation is completed and everything works, then follow the next step
     ```
     
 ## Examples
+![Fold1](images/Fold1.png) ![Fold2](images/Fold2.png)
+<p align="center">
+<img src="images/Fold3.png"/> 
+</p>
