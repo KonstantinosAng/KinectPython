@@ -168,8 +168,8 @@ If the installation is completed and everything works, then follow the next step
 The framework was tested by performing two folds in two different directions. Image examples from the first fold:
 <table>
   <tr>
-    <td> Fold 1: Start </td>
-     <td> Fold 1: End </td>
+    <td align="center"> Fold 1: Start </td>
+     <td align="center"> Fold 1: End </td>
   </tr>
   <tr>
     <td><img src="images/Fold1.png" width=425 height=480></td>
