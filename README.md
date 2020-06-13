@@ -25,7 +25,12 @@ The constructed framework and the hardware used can be seen in the figure below.
 <p align="center">
     <img src="images/framework.png"/> 
 </p>
-<table style="width:100%;">
+<style>
+    .hwifo {
+        width:100%;
+    }
+</style>
+<table class="hwinfo">
   <tr>
     <td align="center" style="font-weight:bold"> CPU: Intel Core i3 - 3110m </td>
     <td align="center"> 2.4 GHz, 2 Cores & 4 Threads </td>
