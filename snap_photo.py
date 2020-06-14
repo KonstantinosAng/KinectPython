@@ -1,4 +1,11 @@
-""" Snap ad save photos using kinect v2 """
+"""
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
+Snap ad save photos using kinect v2
+"""
 
 
 from pykinect2.PyKinectV2 import *
