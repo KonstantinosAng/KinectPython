@@ -1,4 +1,9 @@
 """
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
 Source Code:
     https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_calib3d/py_calibration/py_calibration.html
  
