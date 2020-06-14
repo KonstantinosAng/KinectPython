@@ -14,7 +14,7 @@ a.listen()
 as the Client the parameter localhost is fine.
 - The serial_port is the COM port that the Serial to USB
 cable is connected to for Windows is propably 'COM1' to 'COM6' and for Linux "/dev/ttyUSB0".
-For Linux use dmesg | grep tty to see where the Gripper is connected to. For windows open the device
+For Linux use dmesg | grep tty to see where the ATI Controller is connected to. For windows open the device
 manager and go to Ports (COM & LPT) to find in whice port the Gripper is connected to.
 - The mode parameters has to options, ascii and binary for the communication.
 The ascii mode works better, the binary mode gives false measurements.
