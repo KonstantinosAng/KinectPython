@@ -1,4 +1,8 @@
 """
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
 
 Import the Robot's Step Files and Color/Scale/Assemble them using the instructions in /RoboDK/KUKA/KUKA LWR IV+ Description
 (for Original=kuka_lwr_model_description.json, for custom=custom_kuka_lwr_model_description, for custom2=custom_kuka_lwr_model_description_2) 
