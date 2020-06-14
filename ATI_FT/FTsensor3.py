@@ -1,6 +1,11 @@
 """
-    Use on Linux or Windows only for Python 3.4.x+ (Tested for Python 3.6.8).
-    Simply read ascii or binary and translate to force (N) and torque (Nm).
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
+Use on Linux or Windows only for Python 3.4.x+ (Tested for Python 3.6.8).
+Simply read ascii or binary and translate to force (N) and torque (Nm).
 """
 import serial
 import time
