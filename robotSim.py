@@ -1,3 +1,13 @@
+"""
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
+Handles the simulation and communication with the robot.
+"""
+
+
 # Offset of camera center from the origin of the coordinate system of kinect
 OFFSET_RGB = 95  # mm
 OFFSET_DEPTH = 65  # mm
