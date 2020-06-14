@@ -1,4 +1,9 @@
 """
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
 NON LINEAR KALMAN FILTER ON HAND MOVEMENT
 """
 
