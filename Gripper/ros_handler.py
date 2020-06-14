@@ -1,6 +1,12 @@
 """
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
 Handles the communication between the ROS API and the Clients.
 """
+
 #!/usr/bin/env python
 import os
 # Import ROS libraries only on Linux
