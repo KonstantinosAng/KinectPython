@@ -1,8 +1,14 @@
 """
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
 This file is used only if the Gripper is run on ROS Indigo and works by executing bash files
 in order to publish to the ROS nodes. It is very slow and not used. It is left only if it is
 necessary to have ROS Indigo, otherwise use the ros_handler.py that runs with ROS Jade in near real time.
 """
+
 import socket
 import os
 import time
