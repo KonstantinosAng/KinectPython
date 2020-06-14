@@ -1,4 +1,11 @@
-# Different utilities to perform quaternion operations
+"""
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
+Different utilities to perform quaternion operations
+"""
 
 
 def quaternion2matrix(quaternion):
