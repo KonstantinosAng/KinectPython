@@ -1,4 +1,9 @@
 """
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
 Capture background and store it for fabric localization
 """
 from pykinect2.PyKinectV2 import *
