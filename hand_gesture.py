@@ -1,3 +1,11 @@
+"""
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
+"""
+
 from numba import jit, cuda
 
 
