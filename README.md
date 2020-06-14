@@ -142,7 +142,7 @@ If the installation is completed and everything works, then follow the next step
 
 4. Power On the ATI controller, connect the ATI FT sensor via USB and run the [_ATI_FT/ati_ft_sensor.py_](ATI_FT/ati_ft_sensor.py) file.
 
-5. Run the [_test view.py_](test_view.py) file to adjust the Kinect's view and position.
+5. Run the [_test_view.py_](test_view.py) file to adjust the Kinect's view and position.
 
 6. Capture the background by running the [_background_photo.py_](backround_photo.py) file.
 
