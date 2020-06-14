@@ -1,4 +1,11 @@
-""" Handles the orientation of the operator's hand and the fabric's orientation """
+"""
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
+Handles the orientation of the operator's hand and the fabric's orientation
+"""
 
 
 def orientation(hand_right_points, wrist_right_points):
