@@ -1,8 +1,14 @@
 """
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
 Same as the ros_handler.py but does not initialize ROS node and main node.
 Only for debugging and testing the communication without even connecting the gripper.
 See the ros_handler.py for more details on functionality.
 """
+
 #!/usr/bin/env python
 import os
 
