@@ -1,4 +1,11 @@
-""" Test the kinect's rgb and depth view to find the optimum location """
+"""
+Author: Konstantinos Angelopoulos
+Date: 04/02/2020
+All rights reserved.
+Feel free to use and modify and if you like it give it a star.
+
+Test the kinect's rgb and depth view to find the optimum location
+"""
 
 
 from pykinect2.PyKinectV2 import *
