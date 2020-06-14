@@ -190,7 +190,7 @@ If the installation is completed and everything works, then follow the next step
 
 10. Save and run the [_track_v3.py_](track_v3.py) file.
 
-11. if everything is correct you will see the following lines on the screen:
+11. If everything is correct you will see the following lines on the screen:
     ```
     +-----------------------------+
     [MAIN] Elapsed Time:  seconds
