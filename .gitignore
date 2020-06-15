@@ -173,4 +173,4 @@ testLinearMovement.py
 testForces.py
 livePlotting.py
 PointCloud.py
-!/VideoJoiner.py
+VideoJoiner.py
