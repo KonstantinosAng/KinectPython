@@ -105,7 +105,7 @@ The kukavarproxy server has the ip of the robot and is listening on port 7000.
 	If you only see one then that is the port that you use. If you see both of them then remove the cable, run the command ipconfig /all
 	and see which option is now missing. That option will be the adapter you use. Connect the cable and move to the next instructions.
 	
-	After locating what adapter you use. locate the IP Address and Subnet Mask under that adapter option:
+	After locating what adapter you use, locate the IP Address and Subnet Mask under that adapter option:
 	
 		Ethernet adapter Local Area Connection 5:
 			Connection-specific DNS Suffix: ...
