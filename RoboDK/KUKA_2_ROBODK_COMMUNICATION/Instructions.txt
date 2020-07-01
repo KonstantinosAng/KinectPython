@@ -48,7 +48,7 @@ The kukavarproxy server has the ip of the robot and is listening on port 7000.
 	
 					USER GLOBALS
 					 	
-	Add this lines:
+	Add these lines:
 	
 					INT COM_ACTION=0
 					INT COM_ACTCNT=0
