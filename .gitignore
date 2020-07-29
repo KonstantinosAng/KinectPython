@@ -27,6 +27,7 @@ CasePlots
 data
 # FRI library for c++ communication
 FRILibrary
+KUKA_BackUp
 # Gripper files
 Gripper/dynamixel_motor-master
 Gripper/reflex-ros-pkg-master
