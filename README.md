@@ -1,4 +1,5 @@
 # KinectPython
+Human - Robot Collaboration for fabric folding using RGB/D and Kalman Filters.
 
 ## Table of Contents
 1. [Description](#Description)
