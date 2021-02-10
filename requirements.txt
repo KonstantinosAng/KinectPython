@@ -11,7 +11,7 @@ cffi==1.14.0
 chardet==3.0.4
 colorama==0.4.3
 comtypes==1.1.7
-cryptography==3.2
+cryptography==3.3.2
 cycler==0.10.0
 Cython==0.29.19
 d2l==0.11.4
