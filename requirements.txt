@@ -84,7 +84,7 @@ PyAutoGUI==0.9.50
 pycparser==2.20
 pygame==2.0.0.dev6
 PyGetWindow==0.0.8
-Pygments==2.6.1
+Pygments==2.7.4
 pykinect2==0.1.0
 pylint==2.5.2
 PyMsgBox==1.0.7
