@@ -20,6 +20,10 @@ ATI_FT/t.py
 ATI_FT/test_format.py
 ATI_FT/testConnection.py
 ATI_FT/ttt
+ATI_FT/Documentation
+ATI_FT/force_torque
+ATI_FT/Source
+ATI_FT/legacy
 # kinect calibrate images
 calibrate/Custom_Calibrate
 # Data & plots
