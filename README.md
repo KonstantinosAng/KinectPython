@@ -1,31 +1,43 @@
 # KinectPython
+
 Human - Robot Collaboration for fabric folding using RGB/D and Kalman Filters.
 
+<div align="center">
+  <h3>
+    <a href="https://nemertes.library.upatras.gr/jspui/bitstream/10889/13753/1/DT_M_%ce%91%ce%93%ce%93%ce%95%ce%9b%ce%9f%ce%a0%ce%9f%ce%a5%ce%9b%ce%9f%ce%a3_%ce%9a%ce%a9%ce%9d%ce%a3%ce%a4%ce%91%ce%9d%ce%a4%ce%99%ce%9d%ce%9f%ce%a3_246690.pdf">
+      → Full Master Thesis ←
+    </a>
+  </h3>
+</div>
+
 ## Table of Contents
+
 1. [Description](#Description)
 2. [Installation](#Installation)
-    - [Kinect Setup](#Kinect)
-    - [Python Setup](#Python)
-    - [RoboDK Setup](#RoboDK)
-    - [Reflex One Setup](#ReflexOne)
-    - [ATI Gamma FT Setup](#AtiFT)
+   - [Kinect Setup](#Kinect)
+   - [Python Setup](#Python)
+   - [RoboDK Setup](#RoboDK)
+   - [Reflex One Setup](#ReflexOne)
+   - [ATI Gamma FT Setup](#AtiFT)
 3. [Usage](#Usage)
 4. [Examples](#Examples)
 
-***
+---
+
 ## Description
 
-This algorithm is designed to utilize the [Kinect for windows 2 RGB/D sensor](https://developer.microsoft.com/el-gr/windows/kinect/), 
-the [KUKA LWR IV+](https://www.kuka.com/en-de/products/robot-systems/industrial-robots) industrial robot, 
-the [ATI Force Torque Gamma Sensor](https://www.ati-ia.com/products/ft/ft_models.aspx?id=Gamma), 
-the [Reflex One](https://www.labs.righthandrobotics.com/reflexhand) gripper 
-and non Linear [Kalman Filter](http://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman%20filter.pdf) estimation to enable the 
+This algorithm is designed to utilize the [Kinect for windows 2 RGB/D sensor](https://developer.microsoft.com/el-gr/windows/kinect/),
+the [KUKA LWR IV+](https://www.kuka.com/en-de/products/robot-systems/industrial-robots) industrial robot,
+the [ATI Force Torque Gamma Sensor](https://www.ati-ia.com/products/ft/ft_models.aspx?id=Gamma),
+the [Reflex One](https://www.labs.righthandrobotics.com/reflexhand) gripper
+and non Linear [Kalman Filter](http://web.mit.edu/kirtley/kirtley/binlustuff/literature/control/Kalman%20filter.pdf) estimation to enable the
 Human - Robot Collaboration for fabric folding. This algorithm is an extension of this [publication](https://www.researchgate.net/publication/278028040_Human_Robot_Collaboration_for_Folding_Fabrics_Based_on_ForceRGB-D_Feedback).
 First the algorithm identifies the laid fabric using the background subtraction technique and map the fabric corner points to the corresponding
-wolrd space coordinates. After locating the fabric, the operator can enter the collaborative space and grab a fabric corner. Then the decision model will compute the robot's starting point and command the robot to approach the fabric and grab the 
+wolrd space coordinates. After locating the fabric, the operator can enter the collaborative space and grab a fabric corner. Then the decision model will compute the robot's starting point and command the robot to approach the fabric and grab the
 fabric using the appropriate grasping model. After the robot has grabbed the fabric, it starts to follow the operator's movement
 to properly fold the fabric.
 The constructed framework and the hardware used can be seen in the figure below.
+
 <p align="center">
     <img src="images/framework.png"/> 
 </p>
@@ -58,59 +70,59 @@ To install the drivers for the Kinect 2 for windows download and install the [Ki
 
 ### Python Environment Installation <a name="Python"></a>
 
-The constructed architecture works only on Windows and is tested with Python 3.6. 
+The constructed architecture works only on Windows and is tested with Python 3.6.
 First create a fresh conda virtual environment with anaconda that uses Python 3.6 with
 the following steps:
 
-1. Download and Install Anaconda for Windows [using this link](https://www.anaconda.com/products/individual#windows).
+1.  Download and Install Anaconda for Windows [using this link](https://www.anaconda.com/products/individual#windows).
 
-2. Create a new virtual env with Python 3.6. Open the Anaconda Prompt and type the following command.
+2.  Create a new virtual env with Python 3.6. Open the Anaconda Prompt and type the following command.
 
     ```
     conda create -n name_of_your_environment python=3.6
     ```
 
-3. Activate the constructed environment.
+3.  Activate the constructed environment.
     ```
     conda activate name_of_your_environment
     ```
-4. Install all **requirements** from requirements.txt using the following command.
+4.  Install all **requirements** from requirements.txt using the following command.
     ```
     pip install -r requirements.txt
     ```
-5. Download all files using git clone or the .zip option and place them all in a 
-folder wherever you want.
+5.  Download all files using git clone or the .zip option and place them all in a
+    folder wherever you want.
 
-6. Open the Anaconda Prompt and type the following commands to find the directory
-of the installed python in the conda environment.
-    ```
+6.  Open the Anaconda Prompt and type the following commands to find the directory
+    of the installed python in the conda environment.
+    ````
     conda activate name_of_your_environment
-    
-    where python
+        where python
+        ```
+    ````
+7.  Navigate to the Python's displayed directory, for example
     ```
-7. Navigate to the Python's displayed directory, for example
-   ```
-   C:\Users\UserName\.conda\envs\name_of_your_environment
-   ```
-8. Navigate inside the pykinect2 installed Library of the Python.
+    C:\Users\UserName\.conda\envs\name_of_your_environment
+    ```
+8.  Navigate inside the pykinect2 installed Library of the Python.
     ```
     C:\Users\UserName\.conda\envs\name_of_your_environment\Lib\site-packages\pykinect2
     ```
-9. Replace all the files inside the pykinect2 installed Library with the files located in the
-pykinect2_original folder inside the repository's downloaded files.
+9.  Replace all the files inside the pykinect2 installed Library with the files located in the
+    pykinect2_original folder inside the repository's downloaded files.
 
 10. Add Python Directory to the systems Environment Variables PATH.
     - Search for _Edit the system environment variables_.
     - From the Advanced Tab click on the environment variables.
     - From the System variables scroll down, select Path and click on Edit.
     - By clicking on New add the following paths.
-        ```
-        C:\Users\UserName\.conda\envs\name_of_your_environment
-        C:\Users\UserName\.conda\envs\name_of_your_environment\python.exe
-        C:\Users\UserName\.conda\envs\name_of_your_environment\Library\bin
-        C:\Users\UserName\.conda\envs\name_of_your_environment\Scripts
-        ```
- 
+      ```
+      C:\Users\UserName\.conda\envs\name_of_your_environment
+      C:\Users\UserName\.conda\envs\name_of_your_environment\python.exe
+      C:\Users\UserName\.conda\envs\name_of_your_environment\Library\bin
+      C:\Users\UserName\.conda\envs\name_of_your_environment\Scripts
+      ```
+
 ### RoboDK Installation <a name="RoboDK"></a>
 
 1. To configure RoboDK download and install the latest version of RoboDK [using this link.](https://robodk.com/download)
@@ -125,7 +137,7 @@ pykinect2_original folder inside the repository's downloaded files.
 
 ### Reflex One Gripper Installation <a name="ReflexOne"></a>
 
-The Refex One  Gripper works only with ROS Jade on Ubuntu 14.04 LTS. In order to install and configure the Reflex One software follow the instructions on the [_Gripper/instructions.txt_](Gripper/instructions.txt) file.
+The Refex One Gripper works only with ROS Jade on Ubuntu 14.04 LTS. In order to install and configure the Reflex One software follow the instructions on the [_Gripper/instructions.txt_](Gripper/instructions.txt) file.
 
 ### ATI Gamma FT Sensor Installation <a name="AtiFT"></a>
 
@@ -152,7 +164,8 @@ If the installation is completed and everything works, then follow the next step
 8. Connect the Kinect via USB to the computer.
 
 9. Open the [_track_v3.py_](track_v3.py) file and change the following flags according to what you want to use:
-    ```
+
+   ```
    dim = True  # Flag for finding the fabric's dimensions
    cal = False  # Flag for calibrating the camera
    Sim = True  # Flag for starting RoboDK
@@ -166,20 +179,26 @@ If the installation is completed and everything works, then follow the next step
    cloudPointInit = False  # Flag to import the workspace as a pointCloud in RoboDK
    full_screen = False  # flag to open pygame in fullscreen
    ```
+
    Then change the following parameters to your own configurations. Specifically, the Robot's controller IP and port:
+
    ```
    """======================== ROBOT CONFIGS ==========================="""
    ROBOT_IP = '169.254.98.120'  # KRC2 LAN IP
    ROBOT_PORT = 7000  # KRC2 LAN port
    ```
+
    The Gripper ROS API IP, port and encryption flag same as the server's value:
+
    ```
    """============================= Gripper Configs ==========================="""
    VM_IP = '192.168.56.2'  # Vm with Ubuntu Host only Static IP
    VM_PORT = 20000  # Port to communicate with Ubuntu running ROS
    VM_SERVER_ENCRYPTION = True
    ```
+
    The ATI Controller Server IP, port, encryption flag (same as the server's value) and the COM port that the ATI FT controller is connected to.
+
    ```
    """========================== ATI FT Sensor Configs ====================="""
    ATI_FT_IP = 'localhost'
@@ -192,45 +211,18 @@ If the installation is completed and everything works, then follow the next step
 10. Save and run the [_track_v3.py_](track_v3.py) file.
 
 11. If everything is correct you will see the following lines on the screen:
-    ```
-    +-----------------------------+
-    [MAIN] Elapsed Time:  seconds
-    [MAIN] Loaded: 100%
-    [MAIN] Starting...
-    +-----------------------------+
-    [ATI FT CLIENT]: Message from Server: Hello UDP Client
-    [ATI FT CLIENT]: Message from Server: Hello UDP Client
-    [ATI FT CLIENT]: Message from Server: Started ATI FT... You can grab...
-    +-------------------+
-    Connecting to Gripper Server
-    [GRIPPER CLIENT]: Message from Server: Hello UDP Client
-    [GRIPPER CLIENT]: Message from Server: Hello UDP Client
-    [GRIPPER CLIENT]: Message from Server: Started ROS... You can publish...
-    [GRIPPER CLIENT]: Message from Server: Hello UDP Client
-    [GRIPPER CLIENT]: Message from Server: Opened Gripper
-    [ROBODK]: Connection Successful
-    [ROBODK]: Robot Status: Connected
-    +-------------------+
-       Fabric Detected   
-       Width (mm): 
-       Height (mm): 
-    World Center Point (XYZ in mm):
-     Color2World Fabric Points (mm):
-     ISO Speed Calculated
-    +-------------------+
-    +-------------------+
-      Starting Tracking  
-    +-------------------+
-    ```
-<br>
+    `+-----------------------------+ [MAIN] Elapsed Time: seconds [MAIN] Loaded: 100% [MAIN] Starting... +-----------------------------+ [ATI FT CLIENT]: Message from Server: Hello UDP Client [ATI FT CLIENT]: Message from Server: Hello UDP Client [ATI FT CLIENT]: Message from Server: Started ATI FT... You can grab... +-------------------+ Connecting to Gripper Server [GRIPPER CLIENT]: Message from Server: Hello UDP Client [GRIPPER CLIENT]: Message from Server: Hello UDP Client [GRIPPER CLIENT]: Message from Server: Started ROS... You can publish... [GRIPPER CLIENT]: Message from Server: Hello UDP Client [GRIPPER CLIENT]: Message from Server: Opened Gripper [ROBODK]: Connection Successful [ROBODK]: Robot Status: Connected +-------------------+ Fabric Detected Width (mm): Height (mm): World Center Point (XYZ in mm): Color2World Fabric Points (mm): ISO Speed Calculated +-------------------+ +-------------------+ Starting Tracking +-------------------+`
+    <br>
 
 When the Starting tracking message show up then the operator can enter the collaborative space and grab a fabric corner.
-Then the decision model will compute the robot's starting point and command the robot to approach the fabric and grab the 
+Then the decision model will compute the robot's starting point and command the robot to approach the fabric and grab the
 fabric using the appropriate grasping model. After the robot has grabbed the fabric, it starts to follow the operator's movement
 to properly fold the fabric.
 
 ## Examples
+
 The constructed collaborative space can be seen inside the RoboDK simulation space:
+
 <table>
   <tr>
     <td><img src="images/workspace.png" width=920 height=480></td>
