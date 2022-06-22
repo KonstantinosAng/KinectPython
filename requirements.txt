@@ -63,7 +63,7 @@ nbformat==5.0.6
 nidaqmx==0.5.7
 notebook==6.1.5
 numba==0.49.1
-numpy==1.16.0
+numpy==1.22.0
 oauthlib==3.1.0
 open3d==0.10.0.1
 open3d-python==0.7.0.0
